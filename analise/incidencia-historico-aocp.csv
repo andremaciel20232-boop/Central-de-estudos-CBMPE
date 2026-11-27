@@ -1,0 +1,229 @@
+﻿ordem_global;camada;faixa;bloco;disciplina;unidade_de_ataque;codigo_no_pdf;itens_do_edital;questoes_no_historico;pct_da_disciplina;questoes_esperadas_na_prova
+1;0;A (por edital, sem histórico);III;Legislação Pertinente aos Militares de PE;Estatuto dos Militares do Estado de PE (Lei 6.783/1974);;3.1 a 3.7;2;;
+2;0;A (por edital, sem histórico);III;Legislação Pertinente aos Militares de PE;Código Disciplinar dos Militares (Lei 11.817/2000) e Decreto 50.014/2020;;1.1 a 1.6 e 2;0;;
+3;0;A (por edital, sem histórico);III;Legislação Pertinente aos Militares de PE;Organização Básica do CBMPE (Lei 15.187/2013);;4.1 a 4.4;0;;
+4;0;A (por edital, sem histórico);III;Legislação Pertinente aos Militares de PE;Lei Orgânica Nacional das PMs e CBMs (Lei 14.751/2023);;5;0;;
+5;1;A (CBMPE, sem histórico);II;Química;Aspectos químicos do fogo e da combustão;;5;0;;
+6;1;A (CBMPE, sem histórico);II;Química;Produtos químicos: inflamáveis, oxidantes, corrosivos, incompatibilidades e FDS;;6;0;;
+7;1;A (CBMPE, sem histórico);II;Química;Água: propriedades e tratamento para consumo humano;;7;0;;
+8;1;A (CBMPE, sem histórico);II;Biologia;Noções de primeiros socorros;;4.6;0;;
+9;0;A · piso;I;Espanhol;Interpretação de textos;01;1;10;27,0;1,35
+10;0;A · piso;I;Espanhol;Verbos;02.07;5;10;27,0;1,35
+11;0;A · piso;II;Matemática;Análise combinatória (contagem, arranjos, combinações, permutações);03;1;12;25,5;1,28
+12;0;A · piso;I;Estatística;"Média (simples e ponderada; dados não agrupados)";01.01.01 e bloco 2;4;5;23,8;1,19
+13;0;A · piso;I;Estatística;Problemas introdutórios de probabilidade (equiprováveis, frequentista);bloco 2 · 02.02;2;5;23,8;1,19
+14;0;A · piso;I;Informática;Ameaças (vírus, worms, trojans, malware);06.01;3;8;21,6;1,08
+15;0;A · piso;III;Direito Penal Militar;Parte Geral · Do crime (arts. 29 a 47);01.02;2;9;20,5;1,02
+16;0;A · piso;I;Língua Portuguesa;Interpretação de textos (compreensão);12;1;21;19,3;0,96
+17;0;A · piso;I;Informática;Navegadores (Firefox 5, Chrome 2);05.01;2;7;18,9;0,95
+18;0;A · piso;III;Direito Administrativo;Poderes administrativos e abuso de poder;03;5;9;12,9;0,90
+19;0;A · piso;III;Direito Penal Militar;Parte Geral · Aplicação da lei penal militar (arts. 1º a 28);01.01;1;7;15,9;0,80
+20;0;A · piso;III;Direito Administrativo;Agentes públicos: aspectos constitucionais (estabilidade, acumulação, remuneração);08.02;4;7;10,0;0,70
+21;0;A · piso;III;Direito Administrativo;Organização administrativa: administração indireta;04.02;3;7;10,0;0,70
+22;0;A · piso;III;Direito Penal Militar;Parte Geral · Extinção da punibilidade (arts. 123 a 135);01.07;8;6;13,6;0,68
+23;0;A · piso;III;Direito Constitucional;CF · Poder Legislativo;05.01;8;16;8,1;0,65
+24;0;A · piso;III;Direito Administrativo;Controle da Administração;07;8;6;8,6;0,60
+25;0;A · piso;II;Física;Circuitos elétricos: carga, corrente, circuito de uma malha;09.01;5.1 a 5.18;9;11,8;0,59
+26;0;A · piso;II;Física;Termologia: temperatura, calor, dilatação, 1ª lei;05.01;7;9;11,8;0,59
+27;0;A · piso;II;Biologia;Anatomia e fisiologia humanas (sistemas);11;2.4;9;11,7;0,58
+28;0;A · piso;II;Matemática;Número de elementos da união e interseção de conjuntos;01.02;1;5;10,6;0,53
+29;0;A · piso;II;Física;Ondas;08;6;8;10,5;0,53
+30;0;A · piso;II;Biologia;Genética forense e bancos de perfis genéticos;16.01;1.14;8;10,4;0,52
+31;0;A · piso;I;Língua Portuguesa;Coerência e coesão (anáfora, catáfora, conectores, pronomes relativos);08;11;11;10,1;0,50
+32;0;A · piso;II;Química;Termoquímica e termodinâmica;01.04.04;2.2;15;9,4;0,47
+33;0;A · piso;I;Língua Portuguesa;Conjunções (classe e relações de sentido);02.02.03;4, 7;10;9,2;0,46
+34;0;A · piso;I;Língua Portuguesa;Pontuação;06;12;10;9,2;0,46
+35;0;A · piso;II;Biologia;Ecologia (populações, ciclos, ecossistemas, sucessão);13;3;7;9,1;0,45
+36;0;A · piso;III;Direito Constitucional;CF · Direitos e deveres individuais e coletivos (art. 5º);03.01;6;11;5,6;0,45
+37;0;A · piso;III;Direito Constitucional;ECA · Direitos fundamentais (vida, saúde, liberdade, convivência, profissionalização);01.01.02;14;11;5,6;0,45
+38;0;A · piso;III;Direito Constitucional;ECA · Medidas socioeducativas;01.02.02.04;14;11;5,6;0,45
+39;0;A · piso;II;Química;Reações orgânicas;01.05.05;3.5;14;8,8;0,44
+40;0;A · piso;II;Biologia;Reação em cadeia da polimerase (PCR);06.01.02;1.14;6;7,8;0,39
+41;0;A · piso;II;Biologia;Ácidos nucleicos;02.02;1.3, 1.6;6;7,8;0,39
+42;0;A · piso;III;Direito Constitucional;CF · Estado de defesa e estado de sítio;06.01;10;9;4,6;0,37
+43;0;A · piso;III;Direito Constitucional;CF · Poder Executivo;05.02;8;9;4,6;0,37
+44;0;A · piso;II;Química;Cinética química;01.04.05;2.2.5;11;6,9;0,35
+45;0;A · piso;II;Química;Concentração, diluição e mistura de soluções;01.04.02;1.8;11;6,9;0,35
+46;0;A · piso;II;Química;Equilíbrio iônico: eletrólitos, pH/pOH, hidrólise, tampão, Kps;01.04.06.02;2.5;11;6,9;0,35
+47;0;A · piso;II;Química;Funções inorgânicas (ácidos, bases, sais, óxidos);01.01.04;1.6;11;6,9;0,35
+48;0;A · piso;II;Física;"Energia cinética, potencial e mecânica; trabalho e potência";02.04;3;5;6,6;0,33
+49;0;A · piso;III;Direito Constitucional;CF · Nacionalidade;03.04;6;8;4,1;0,32
+50;0;A · piso;II;Matemática;Cilindros;07.03;2;3;6,4;0,32
+51;0;A · piso;III;Direito Constitucional;CF · Administração Pública: disposições gerais (arts. 37 a 38);04.04.01;7;7;3,6;0,28
+52;1;A;I;Estatística;Desvio padrão e variância;01.03.01 e bloco 2;4;4;19,0;0,95
+53;1;A;I;Informática;Planilhas (Excel 2019/365 e Calc);04.02;7;6;16,2;0,81
+54;1;A;III;Direito Administrativo;Responsabilidade civil do Estado;05;8;6;8,6;0,60
+55;1;A;III;Direito Administrativo;Serviços públicos e concessões (Lei 8.987/1995);06;7;6;8,6;0,60
+56;1;A;III;Direito Penal Militar;Parte Geral · Das penas (principais, aplicação, suspensão condicional);01.05;5;5;11,4;0,57
+57;1;A;I;Língua Portuguesa;Sintaxe: termos da oração e orações subordinadas;05;9;9;8,3;0,41
+58;1;A;I;Espanhol;Adjetivos;02.03;3;3;8,1;0,41
+59;1;A;I;Espanhol;Tradução;03.02;1, 10;3;8,1;0,41
+60;1;A;II;Física;Oscilações (MHS);07;6;5;6,6;0,33
+61;1;A;II;Matemática;Função do 2º grau;05.04;4;3;6,4;0,32
+62;1;A;II;Matemática;Inequações de 1º grau;05.03;4;3;6,4;0,32
+63;1;A;II;Matemática;Porcentagem;02.02;1;3;6,4;0,32
+64;1;A;II;Química;Cálculo estequiométrico;01.02.02;2.1.5;10;6,3;0,31
+65;1;A;II;Química;Tabela periódica e propriedades periódicas;01.01.01.03;1.3;10;6,3;0,31
+66;1;A;III;Direito Constitucional;CF · Poder Judiciário;05.03;8;7;3,6;0,28
+67;1;A;II;Física;Cinemática escalar (MU, MUV, vertical, gráficos);01.01;2.1 a 2.4;4;5,3;0,26
+68;1;A;II;Física;Forças de atrito;02.02;2.15;4;5,3;0,26
+69;1;A;II;Física;Física moderna (quântica e nuclear);12;sem item direto;4;5,3;0,26
+70;1;A;II;Biologia;Citoplasma, organelas, citoesqueleto e núcleo;03.03 a 03.06;1.1;4;5,2;0,26
+71;1;A;II;Biologia;Fatores evolutivos (seleção, mutação, deriva, fluxo gênico);15.02;2.1;4;5,2;0,26
+72;1;A;II;Biologia;Histologia: tecidos conjuntivos;04;1.9;4;5,2;0,26
+73;1;A;III;Direito Constitucional;Estatuto da Juventude;02;15;6;3,0;0,24
+74;1;A;III;Direito Constitucional;CF · Funções essenciais à Justiça;05.04;9;5;2,5;0,20
+75;1;A;III;Direito Constitucional;CF · Ordem social: família, criança, adolescente e idoso;07.04;11;5;2,5;0,20
+76;1;A;III;Direito Constitucional;CF · Ordem social: seguridade, educação, meio ambiente e outros;07 (resto);11;5;2,5;0,20
+77;1;A;III;Direito Constitucional;CF · Princípios fundamentais (arts. 1º a 4º);02;6;5;2,5;0,20
+78;1;A;III;Direito Constitucional;ECA · Ato infracional: disposições gerais, direitos e garantias;01.02.02.01 a .03;14;5;2,5;0,20
+79;1;A;III;Direito Constitucional;Maria da Penha · Procedimentos e medidas protetivas de urgência;01.03;16;5;2,5;0,20
+80;2;M;III;Direito Administrativo;Atos: espécies, classificação e formação;02.03;6;5;7,1;0,50
+81;2;M;I;Estatística;Coeficiente de variação e variância relativa;01.03.02;4;2;9,5;0,48
+82;2;M;I;Estatística;Eventos e espaço amostral;02.01 (dois blocos);2;2;9,5;0,48
+83;2;M;I;Estatística;Quantis (mediana, quartil, decil, percentil) e ogiva;01.01.02 e bloco 2;4;2;9,5;0,48
+84;2;M;III;Direito Penal Militar;Parte Especial · Crimes contra o serviço militar e o dever militar (insubmissão, deserção, abandono de posto);02.01.02;9;4;9,1;0,45
+85;2;M;I;Informática;Apresentações (PowerPoint e Impress);04.03;7;3;8,1;0,41
+86;2;M;III;Direito Administrativo;Atos: desfazimento (anulação, revogação, cassação);02.04;6;4;5,7;0,40
+87;2;M;III;Direito Administrativo;Princípios expressos da Administração;01.01;2;4;5,7;0,40
+88;2;M;III;Direito Penal Militar;Parte Especial · Crimes contra a administração militar (peculato);02.01.04;9;3;6,8;0,34
+89;2;M;III;Direito Penal Militar;Parte Especial · Crimes contra a autoridade ou disciplina militar;02.01.01;9;3;6,8;0,34
+90;2;M;III;Direito Administrativo;Organização: descentralização e desconcentração;04.01.03;3;3;4,3;0,30
+91;2;M;II;Química;Eletroquímica (Nox, redox, pilhas, eletrólise);01.04.07;2.6;9;5,7;0,28
+92;2;M;II;Química;Funções orgânicas (grupos funcionais, nomenclatura, propriedades);01.05.03;3.1.2, 3.2;9;5,7;0,28
+93;2;M;I;Língua Portuguesa;"Funções do ""que"" e do ""se""";10 e 11;10;6;5,5;0,28
+94;2;M;I;Língua Portuguesa;Verbo (conjugação, modos e emprego);02.02.01;7;6;5,5;0,28
+95;2;M;I;Espanhol;Artigos;02.01;1;2;5,4;0,27
+96;2;M;I;Informática;Conceitos gerais de informática;01;1, 5;2;5,4;0,27
+97;2;M;I;Espanhol;Divergências lexicais (falsos cognatos, heterossemânticos, heterotônicos);03.03;11;2;5,4;0,27
+98;2;M;I;Informática;Editores de texto (Writer);04.01;7;2;5,4;0,27
+99;2;M;I;Informática;Hardware e periféricos;02;5.1, 5.2;2;5,4;0,27
+100;2;M;I;Espanhol;Pronomes;02.04;4;2;5,4;0,27
+101;2;M;I;Informática;Recursos e procedimentos de segurança (senhas, autenticação);06.02;3;2;5,4;0,27
+102;2;M;I;Espanhol;Substantivos;02.02;2;2;5,4;0,27
+103;2;M;I;Informática;Windows 11 (sistemas operacionais);03;6;2;5,4;0,27
+104;2;M;I;Língua Portuguesa;Formação das palavras;02.01;16;5;4,6;0,23
+105;2;M;III;Direito Penal Militar;Parte Geral · Medidas de segurança;01.06;6;2;4,5;0,23
+106;2;M;II;Matemática;Conceitos iniciais de geometria espacial;07.01;2;2;4,3;0,21
+107;2;M;II;Matemática;Equações do 1º grau;04.01;4;2;4,3;0,21
+108;2;M;II;Matemática;Função do 1º grau;05.02;4;2;4,3;0,21
+109;2;M;II;Matemática;Proporções e grandezas proporcionais;02.01;1;2;4,3;0,21
+110;2;M;III;Direito Administrativo;Agentes públicos: classificação;08.01;4;2;2,9;0,20
+111;2;M;III;Direito Administrativo;Atos: elementos e requisitos;02.01;6;2;2,9;0,20
+112;2;M;III;Direito Administrativo;Atos: tópicos mesclados;02.06;6;2;2,9;0,20
+113;2;M;III;Direito Administrativo;Organização: administração direta (órgãos);04.01.01;3;2;2,9;0,20
+114;2;M;III;Direito Administrativo;Princípios implícitos;01.02;2;2;2,9;0,20
+115;2;M;II;Física;Ótica: conceitos iniciais;06.01;6;3;3,9;0,20
+116;2;M;II;Física;Ótica: espelhos esféricos;06.03;6.3;3;3,9;0,20
+117;2;M;II;Biologia;Botânica;09;1.9;3;3,9;0,19
+118;2;M;II;Biologia;Ciclo celular, mitose e meiose;03.07;1.2;3;3,9;0,19
+119;2;M;II;Biologia;Embriologia;05;2.4;3;3,9;0,19
+120;2;M;II;Biologia;Membrana plasmática e transporte;03.01 e 03.02;1.1;3;3,9;0,19
+121;2;M;II;Química;Gases (equação dos gases perfeitos);01.03;1.7;6;3,8;0,19
+122;2;M;I;Língua Portuguesa;Acentuação gráfica;01.01;5, 6;4;3,7;0,18
+123;2;M;I;Língua Portuguesa;Colocação pronominal;03;15;4;3,7;0,18
+124;2;M;I;Língua Portuguesa;Crase;07.02;8;4;3,7;0,18
+125;2;M;I;Língua Portuguesa;Figuras de linguagem;09.02;3;4;3,7;0,18
+126;2;M;I;Língua Portuguesa;Questões variadas de classes de palavras;02.02.04;7;4;3,7;0,18
+127;2;M;III;Direito Constitucional;CF · Direitos políticos;03.05;6;4;2,0;0,16
+128;2;M;III;Direito Constitucional;CF · Direitos sociais;03.03;6;4;2,0;0,16
+129;2;M;III;Direito Constitucional;CF · Jurisprudência dos Tribunais Superiores;09;13;4;2,0;0,16
+130;2;M;III;Direito Constitucional;CF · Organização político-administrativa;04.01;7;4;2,0;0,16
+131;2;M;III;Direito Constitucional;CF · Poder constituinte;01.02;3;4;2,0;0,16
+132;2;M;III;Direito Constitucional;CF · Segurança pública (art. 144);06.03;10;4;2,0;0,16
+133;2;M;III;Direito Constitucional;CF · União: bens, competências;04.02;7;4;2,0;0,16
+134;2;M;III;Direito Constitucional;ECA · Acesso à Justiça (procedimentos);01.02.05;14;4;2,0;0,16
+135;2;M;III;Direito Constitucional;ECA · Política de atendimento;01.02.01;14;4;2,0;0,16
+136;2;M;III;Direito Constitucional;Maria da Penha · Assistência à mulher;01.02;16;4;2,0;0,16
+137;2;M;III;Direito Constitucional;Maria da Penha · Violência doméstica: conceito e formas;01.01;16;4;2,0;0,16
+138;2;M;II;Química;Geometria molecular, polaridade e forças intermoleculares;01.01.05;1.4;5;3,1;0,16
+139;2;M;II;Química;Radioatividade e química nuclear;01.01.01.02;1.9;5;3,1;0,16
+140;2;M;II;Física;Eletromagnetismo (ímãs e campo magnético);11;5.19 a 5.22;2;2,6;0,13
+141;2;M;II;Física;Fluidostática;04;2.19 a 2.21;2;2,6;0,13
+142;2;M;II;Física;Leis de Newton (conceitos iniciais);02.01;2.9;2;2,6;0,13
+143;2;M;II;Física;Quantidade de movimento e impulso;02.05;2.12;2;2,6;0,13
+144;2;M;II;Física;Ótica: refração da luz;06.02;6.2, 6.11;2;2,6;0,13
+145;2;M;II;Biologia;Bioquímica: enzimas e questões mescladas;02.01 e 02.03;1.3;2;2,6;0,13
+146;2;M;II;Biologia;Eletroforese;06.01.03;1.14;2;2,6;0,13
+147;2;M;II;Biologia;Engenharia genética e DNA recombinante;06.02;1.11;2;2,6;0,13
+148;2;M;II;Biologia;Origem da vida e evolução do metabolismo;01;1.4, 1.10;2;2,6;0,13
+149;2;M;II;Biologia;Replicação, transcrição e tradução;06.01.01;1.6, 1.7;2;2,6;0,13
+150;2;M;II;Biologia;Zoologia;10;2.2;2;2,6;0,13
+151;2;M;II;Química;Equilíbrio químico: constante e Le Chatelier;01.04.06.01;2.4;4;2,5;0,13
+152;2;M;II;Matemática;Conjuntos: definição, operações, pertinência;01.01;1;1;2,1;0,11
+153;2;M;II;Matemática;Divisibilidade, MMC e fatoração;01.03;1;1;2,1;0,11
+154;2;M;II;Matemática;Equações do 2º grau e biquadradas;04.02;4;1;2,1;0,11
+155;2;M;II;Matemática;Funções: definição, interpretação gráfica;05.01;4;1;2,1;0,11
+156;2;M;II;Matemática;Geometria plana: circunferência e círculo;06.03;2;1;2,1;0,11
+157;2;M;II;Matemática;Geometria plana: quadriláteros;06.02;2;1;2,1;0,11
+158;2;M;II;Matemática;Geometria plana: triângulos (área e perímetro);06.01;2;1;2,1;0,11
+159;2;M;II;Matemática;Números racionais, frações e dízimas;01.04;1;1;2,1;0,11
+160;2;M;II;Química;Isomeria plana e espacial;01.05.04;3.2;3;1,9;0,09
+161;2;M;II;Química;Modelos atômicos e estrutura do átomo;01.01.01.01;1.2;3;1,9;0,09
+162;2;M;II;Química;Química ambiental;01.06.01;4;3;1,9;0,09
+163;2;M;II;Química;Solubilidade e coeficiente de solubilidade;01.04.01;1.8, 2.5;3;1,9;0,09
+164;2;M;II;Química;Tipos de reações químicas;01.01.08;2.1.1;3;1,9;0,09
+165;2;M;II;Física;Aplicações das leis de Newton (decomposição, plano inclinado);02.03;2.9, 2.16;1;1,3;0,07
+166;2;M;II;Física;Capacitores;10.03;5.8;1;1,3;0,07
+167;2;M;II;Física;Cinemática vetorial;01.02;1.5 a 1.7;1;1,3;0,07
+168;2;M;II;Física;Circuitos de várias malhas (Kirchhoff);09.02;5.13;1;1,3;0,07
+169;2;M;II;Física;Eletrostática: eletrização, força e campo;10.01;5.2 a 5.4;1;1,3;0,07
+170;2;M;II;Física;Eletrostática: potencial e trabalho;10.02;5.3;1;1,3;0,07
+171;2;M;II;Física;Geradores e receptores;09.03;5.13;1;1,3;0,07
+172;2;M;II;Física;Gravitação universal;03;4;1;1,3;0,07
+173;2;M;II;Física;Sistema de partículas, torque e equilíbrio;02.06;2.10, 2.13, 2.14;1;1,3;0,07
+174;3;B;I;Estatística;Conceitos iniciais e tipos de variáveis;01.01.01;1;1;4,8;0,24
+175;3;B;I;Língua Portuguesa;Preposição;02.02.02;7;3;2,8;0,14
+176;3;B;I;Língua Portuguesa;Regência verbal e nominal;07.01;14;3;2,8;0,14
+177;3;B;I;Língua Portuguesa;Tipologia e gênero textual;13;2;3;2,8;0,14
+178;3;B;I;Espanhol;Advérbios;02.05;6;1;2,7;0,14
+179;3;B;I;Informática;Compactadores e descompactadores;07;4;1;2,7;0,14
+180;3;B;I;Informática;Extensão de arquivos;08;4;1;2,7;0,14
+181;3;B;I;Espanhol;Preposições;02.06;7;1;2,7;0,14
+182;3;B;I;Informática;Processador (organização e arquitetura);TI-01;5.1;1;2,7;0,14
+183;3;B;I;Espanhol;Sinônimos, antônimos, parônimos, denotação e conotação;03.01;10;1;2,7;0,14
+184;3;B;III;Direito Constitucional;CF · Controle de constitucionalidade;08;5;3;1,5;0,12
+185;3;B;III;Direito Constitucional;CF · Remédios constitucionais;03.02;6;3;1,5;0,12
+186;3;B;III;Direito Constitucional;CF · Servidores públicos (arts. 39 a 41);04.04.02;7;3;1,5;0,12
+187;3;B;III;Direito Penal Militar;Crimes militares em tempo de guerra (favorecimento ao inimigo);02.02;10;1;2,3;0,11
+188;3;B;III;Direito Penal Militar;Parte Especial · Crimes contra a administração da Justiça Militar;02.01.05;9;1;2,3;0,11
+189;3;B;III;Direito Penal Militar;Parte Especial · Crimes contra a pessoa;02.01.03;9;1;2,3;0,11
+190;3;B;III;Direito Penal Militar;Parte Geral · Concurso de agentes;01.04;4;1;2,3;0,11
+191;3;B;III;Direito Penal Militar;Parte Geral · Imputabilidade penal;01.03;3;1;2,3;0,11
+192;3;B;II;Matemática;Prismas;07.02;2;1;2,1;0,11
+193;3;B;II;Matemática;Sólidos compostos;07.04;2;1;2,1;0,11
+194;3;B;III;Direito Administrativo;Atos: atributos;02.02;6;1;1,4;0,10
+195;3;B;III;Direito Administrativo;Atos: teoria dos motivos determinantes;02.05;6;1;1,4;0,10
+196;3;B;III;Direito Administrativo;Jurisprudência: responsabilidade civil do Estado;09;8;1;1,4;0,10
+197;3;B;III;Direito Constitucional;CE-PE · Constituição do Estado de Pernambuco;CE-PE;12;2;1,0;0,08
+198;3;B;III;Direito Constitucional;CF · Teoria geral: formas de Estado e de governo;01.01;7;2;1,0;0,08
+199;3;B;III;Direito Constitucional;ECA · Disposições preliminares;01.01.01;14;2;1,0;0,08
+200;3;B;III;Direito Constitucional;ECA · Infrações administrativas;01.02.06;14;2;1,0;0,08
+201;3;B;III;Direito Constitucional;ECA · Prevenção;01.01.03;14;2;1,0;0,08
+202;3;B;III;Direito Constitucional;Maria da Penha · Tópicos mesclados;01.04;16;2;1,0;0,08
+203;3;B;II;Física;Termologia: entropia, 2ª lei, máquinas térmicas;05.02;7.9 a 7.11;1;1,3;0,07
+204;3;B;II;Física;Ótica: lentes esféricas;06.04;6.3;1;1,3;0,07
+205;3;B;II;Física;Ótica: outros tópicos;06.05;6.5;1;1,3;0,07
+206;3;B;II;Biologia;Microbiologia;08;4.4;1;1,3;0,06
+207;3;B;II;Biologia;Parasitologia;12;4.4;1;1,3;0,06
+208;3;B;II;Biologia;Poluição e meio ambiente;14;3.12;1;1,3;0,06
+209;3;B;II;Biologia;Taxonomia e sistemática;07;2.2;1;1,3;0,06
+210;3;B;II;Biologia;Teorias evolutivas;15.01;2.1;1;1,3;0,06
+211;3;B;II;Química;Hidrocarbonetos: definição e nomenclatura;01.05.02;3.1.2;2;1,3;0,06
+212;3;B;II;Química;Introdução à orgânica e cadeias carbônicas;01.05.01;3.1.1;2;1,3;0,06
+213;3;B;II;Química;Ligações químicas;01.01.03;1.4;2;1,3;0,06
+214;3;B;II;Química;Propriedades gerais da matéria e estados físicos;01.01.02;1.7;2;1,3;0,06
+215;3;B;I;Língua Portuguesa;Significação de vocábulos e expressões;04.01;17;1;0,9;0,05
+216;3;B;I;Língua Portuguesa;Variação linguística (linguagem não verbal, regional, contextual);09.01;18;1;0,9;0,05
+217;3;B;III;Direito Constitucional;CF · Aplicação das normas no tempo (recepção, repristinação);01.03;3;1;0,5;0,04
+218;3;B;III;Direito Constitucional;CF · Forças Armadas;06.02;10;1;0,5;0,04
+219;3;B;III;Direito Constitucional;CF · Municípios;04.03;7;1;0,5;0,04
+220;3;B;III;Direito Constitucional;CF · Organização dos Poderes (mescladas);05.05;8;1;0,5;0,04
+221;3;B;III;Direito Constitucional;ECA · Conselho Tutelar;01.02.04;14;1;0,5;0,04
+222;3;B;III;Direito Constitucional;ECA · Medidas pertinentes aos pais ou responsável;01.02.03;14;1;0,5;0,04
+223;3;B;III;Direito Constitucional;Maria da Penha · Jurisprudência;02.01;16;1;0,5;0,04
+224;3;B;II;Química;Leis ponderais e número de Avogadro;01.02.01;1.2;1;0,6;0,03
+225;3;B;II;Química;"Materiais homogêneos e heterogêneos; separação de misturas";01.01.07;1.1;1;0,6;0,03
+226;3;B;II;Química;Propriedades coligativas;01.04.03;sem item direto;1;0,6;0,03
+227;3;B;II;Química;Substâncias simples e compostas, alotropia;01.01.06;1.1;1;0,6;0,03
+228;3;B;II;Química;Unidades de massa, volume e densidade;01.02.03;2.1.2;1;0,6;0,03
