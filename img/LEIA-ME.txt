@@ -3,7 +3,7 @@ Imagens da Central de Estudos (versão CBMPE)
 Coloque aqui os arquivos abaixo, com estes nomes. Enquanto não existirem, a página
 usa um fundo escuro liso e um avatar padrão, sem quebrar o layout.
 
-  banner-lateral.jpg    bloco do topo da barra lateral (já incluída: 820 x 312 px)
+  banner-lateral.jpg    bloco do topo da barra lateral (já incluída: 678 x 452 px)
   fundo-cabecalho.jpg   fundo do cabeçalho do Painel Geral (já incluído: 960 x 580 px)
   perfil.png            imagem redonda do perfil, brasão do CBMPE (já incluída: 256 x 256 px)
   foto1.jpg a foto4.jpg "Minha Força & Inspiração" (já incluídas: até 1000 px no lado maior, sem metadados)
