@@ -4,8 +4,8 @@ Coloque aqui os arquivos abaixo, com estes nomes. Enquanto não existirem, a pá
 usa um fundo escuro liso e um avatar padrão, sem quebrar o layout.
 
   banner-lateral.jpg    bloco do topo da barra lateral (foto larga/alta). Sugestão: 800 x 900 px, até 150 KB
-  fundo-cabecalho.jpg   fundo do cabeçalho do Painel Geral. Sugestão: 1600 x 700 px, até 250 KB
-  perfil.jpg            foto redonda do perfil. Sugestão: 400 x 400 px, até 60 KB
+  fundo-cabecalho.jpg   fundo do cabeçalho do Painel Geral (já incluído: 960 x 580 px)
+  perfil.png            imagem redonda do perfil, brasão do CBMPE (já incluída: 256 x 256 px)
   foto1.jpg a foto4.jpg "Minha Força & Inspiração" (opcional). Sugestão: 800 x 800 px, até 120 KB cada
 
 Otimização: JPEG progressivo, qualidade 75 a 80, sem metadados.
