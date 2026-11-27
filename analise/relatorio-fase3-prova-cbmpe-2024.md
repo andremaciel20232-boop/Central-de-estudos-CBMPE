@@ -1,5 +1,8 @@
 # Fase 3 — A prova do CBM-PE 2024 (2º Tenente): a última prova do mesmo cargo
 
+> **Atualização:** com o edital de 2024 em mãos, as três dúvidas finais deste relatório estão respondidas em `relatorio-fase3b-edital-2024-vs-2026.md` (redação oficial era item de 2024 e saiu; Decreto 50.014, Lei 15.187 e Lei 14.751 são novas em 2026; a Q14 seguia um edital que dizia só "Windows").
+
+
 Fonte: caderno de questões e gabarito da prova **AOCP · CBMPE · 2º Tenente do Corpo de Bombeiros Militar** (Portaria Conjunta SAD/SDS nº 84/2023, aplicada em 2024). Classifiquei as 70 questões pelo conteúdo, uma a uma, e as cruzei com o edital atual, com o histórico da Fase 1 e com os cadernos da Fase 2.
 
 ## 1. Resumo executivo
