@@ -1,0 +1,13 @@
+Imagens da Central de Estudos (versão CBMPE)
+
+Coloque aqui os arquivos abaixo, com estes nomes. Enquanto não existirem, a página
+usa um fundo escuro liso e um avatar padrão, sem quebrar o layout.
+
+  banner-lateral.jpg    bloco do topo da barra lateral (foto larga/alta). Sugestão: 800 x 900 px, até 150 KB
+  fundo-cabecalho.jpg   fundo do cabeçalho do Painel Geral. Sugestão: 1600 x 700 px, até 250 KB
+  perfil.jpg            foto redonda do perfil. Sugestão: 400 x 400 px, até 60 KB
+  foto1.jpg a foto4.jpg "Minha Força & Inspiração" (opcional). Sugestão: 800 x 800 px, até 120 KB cada
+
+Otimização: JPEG progressivo, qualidade 75 a 80, sem metadados.
+O véu escuro sobre banner-lateral.jpg e fundo-cabecalho.jpg já está no código (nos dois temas)
+e foi testado com foto totalmente branca: o texto mantém contraste mínimo de 4,5:1.

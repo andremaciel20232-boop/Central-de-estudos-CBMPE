@@ -1,0 +1,405 @@
+
+LÍNGUA PORTUGUESA 
+
+1 Compreensão e interpretação de textos.
+2 Tipologias e gêneros textuais.
+3 Figuras de linguagem.
+4 Relações semânticas estabelecidas entre orações, períodos ou parágrafos (oposição/contraste, conclusão, concessão, causalidade, adição, alternância etc.).
+5 Ortografia oficial.
+6 Acentuação gráfica.
+7 Emprego das classes de palavras.
+8 Emprego do sinal indicativo de crase.
+9 Sintaxe da oração (termos essenciais, termos integrantes e termos acessórios da oração e suas funções no texto) e do período (período simples e período composto por coordenação e por subordinação).
+10 Funções do "que" e do "se".
+11 Mecanismos de coesão textual.
+12 Emprego dos sinais de pontuação e suas funções no texto.
+13 Concordância nominal e verbal.
+14 Regência nominal e verbal.
+15 Colocação pronominal.
+16 Processos de formação de palavras.
+17 Significação das palavras.
+18 Variação linguística.
+
+
+LÍNGUA ESTRANGEIRA – ESPANHOL 
+
+1 Domínio da língua estrangeira através de leitura e compreensão de textos de fontes variadas: Determinantes do nome: artigos: definidos e contrações, indefinidos; possessivos; demonstrativos; numerais; indefinidos; relativos; interrogativos; exclamativos.
+
+2 Substantivos: gênero, número e grau.
+3 Adjetivos: gênero, número, grau.
+4 Pronomes: pessoais (sujeitos e complementos), possessivos, demonstrativos, relativos, indefinidos, interrogativos e exclamativos.
+5 Verbos: auxiliares, regulares, irregulares (de irregularidade comum e irregularidade própria), impessoais e pronominais e perífrases verbais.
+6 Advérbios e Locuções Adverbiais.
+7 Preposições.
+8 Conjunções: coordenativas, subordinativas.
+9 Acentuação.
+10 Sinônimos e antônimos.
+11 Divergências entre o português e o espanhol: heterográficos, heteroprosódicos (heterofônicos ou heterotônicos), heterogenéricos, heterossemânticos.
+
+INFORMÁTICA 
+
+1 Conceito de internet e intranet.
+2 Conceitos básicos e modos de utilização de tecnologias, ferramentas, aplicativos e procedimentos associados à internet/intranet, incluindo navegadores, serviços de internet e computação em nuvem.
+
+3 Conceitos de proteção e segurança da informação, incluindo ameaças, vulnerabilidades, malwares, phishing, criptografia, autenticação e boas práticas de segurança.
+
+4 Conceitos de organização e gerenciamento de arquivos, pastas e programas, incluindo criação, nomeação, renomeação, cópia, movimentação e exclusão.
+
+5.1 Organização de computadores: processador, memórias, dispositivos de armazenamento, dispositivos de entrada e saída e periféricos.
+5.2 Conceitos básicos de instalação, configuração e utilização de periféricos.
+
+6 Ambientes operacionais: utilização básica do sistema operacional Windows 11 (em português), incluindo gerenciamento de arquivos, pastas, programas, configurações e recursos do sistema, Painel de Controle e comandos do Prompt de Comando.
+
+7 Utilização de ferramentas de texto, planilha e apresentação do pacote Microsoft Office 2019 em português (Word, Excel e PowerPoint) e do pacote LibreOffice 7 em português (Writer, Calc e Impress), incluindo edição e formatação de documentos, fórmulas e funções, gráficos, tabelas, apresentações e exportação de arquivos.
+
+
+ESTATÍSTICA 
+
+1 Conceitos: População, censo, amostra aleatória, Normas para apresentação de dados.
+2 Probabilidade: definição Clássica, Geométrica e Axiomática.
+3 Variável Aleatória Discreta e Variável Aleatória Contínua, Distribuições de Probabilidade Discretas e Contínuas, Função Densidade de Probabilidade, Função Distribuição de Probabilidade e Função de Probabilidade.
+4 Descrição de Dados Numérica e Gráfica: Medidas de Centralidade, Medidas de posição, Medidas de dispersão, Histograma e Gráfico de Caixa e Bigodes (Boxplot).
+5 Testes de Hipóteses: Teste “t”, Teste F e Análise da Variância.
+6 Análise de Regressão Linear: Ajuste da Reta e de outras Funções Lineares
+
+
+MATEMÁTICA 
+
+1 Conhecimentos numéricos – operações em conjuntos numéricos (naturais, inteiros, racionais e reais), desigualdades, divisibilidade, fatoração, razões e proporções, porcentagem e juros, relações de dependência entre grandezas, sequências e progressões, princípios de contagem.
+
+2 Conhecimentos geométricos – características das figuras geométricas planas e espaciais; grandezas, unidades de medida e escalas; comprimentos, áreas e volumes; ângulos; posições de retas; simetrias de figuras planas ou espaciais; congruência e semelhança de triângulos; teorema de Tales; relações métricas nos triângulos; circunferências; trigonometria do ângulo agudo.
+
+3 Conhecimentos de estatística e probabilidade – representação e análise de dados; medidas de tendência central (médias, moda e mediana); desvios e variância; noções de probabilidade.
+
+4 Conhecimentos algébricos – gráficos e funções; funções algébricas do 1.º e dos 2.º graus, polinomiais, racionais, exponenciais e logarítmicas; equações e inequações; relações no ciclo trigonométrico e funções trigonométricas.
+
+5 Conhecimentos algébricos/geométricos – plano cartesiano; retas; circunferências; paralelismo e perpendicularidade, sistemas de equações.
+
+FÍSICA 
+
+1 Conhecimentos básicos e fundamentais:
+1.1 Noções de ordem de grandeza.
+1.2 Notação Científica.
+1.3 Sistema Internacional de Unidades.
+1.4 Observações e mensurações: representação de grandezas físicas como grandezas mensuráveis.
+1.5 Ferramentas básicas: gráficos e vetores.
+1.6 Conceituação de grandezas vetoriais e escalares.
+1.7 Operações básicas com vetores.
+2 O movimento, o equilíbrio e a descoberta de leis físicas:
+2.1 Grandezas fundamentais da mecânica: tempo, espaço, velocidade e aceleração.
+2.2 Relação histórica entre força e movimento.
+2.3 Descrições do movimento e sua interpretação: quantificação do movimento e sua descrição matemática e gráfica.
+2.4 Casos especiais de movimentos e suas regularidades observáveis.
+2.5 Conceito de inércia.
+2.6 Noção de sistemas de referência inerciais e não inerciais.
+2.7 Noção dinâmica de massa e quantidade de movimento (momento linear).
+2.8 Força e variação da quantidade de movimento.
+2.9 Leis de Newton.
+2.10 Centro de massa e a ideia de ponto material.
+2.11 Conceito de forças externas e internas.
+2.12 Lei da conservação da quantidade de movimento (momento linear) e teorema do impulso.
+2.13 Momento de uma força (torque).
+2.14 Condições de equilíbrio estático de ponto material e de corpos rígidos.
+2.15 Força de atrito, força peso, força normal de contato e tração.
+2.16 Diagramas de forças.
+2.17 Identificação das forças que atuam nos movimentos circulares.
+2.18 Noção de força centrípeta e sua quantificação.
+2.19 A hidrostática: aspectos históricos e variáveis relevantes.
+2.20 Empuxo.
+2.21 Princípios de Pascal, Arquimedes e Stevin: condições de flutuação, relação entre diferença de nível e pressão hidrostática.
+
+3 Energia, trabalho e potência:
+3.1Conceituação de trabalho, energia e potência.
+3.2 Conceito de energia potencial e de energia cinética.
+3.3 Conservação de energia mecânica e dissipação de energia.
+3.4 Trabalho da força gravitacional e energia potencial gravitacional.
+3.5 Forças conservativas e dissipativas.
+
+4 A mecânica e o funcionamento do universo:
+4.1 Força peso.
+4.2 Aceleração gravitacional.
+4.3 Lei da Gravitação Universal.
+4.4 Leis de Kepler.
+4.5 Movimentos de corpos celestes.
+4.6 Influência na Terra: marés e variações climáticas.
+4.7 Concepções históricas sobre a origem do universo e sua evolução.
+
+5 Fenômenos elétricos e magnéticos:
+5.1 Carga elétrica e corrente elétrica.
+5.2 Lei de Coulomb.
+5.3 Campo elétrico e potencial elétrico.
+5.4 Linhas de campo.
+5.5 Superfícies equipotenciais.
+5.6 Poder das pontas.
+5.7 Blindagem.
+5.8 Capacitores.
+5.9 Efeito Joule.
+5.10 Lei de Ohm.
+5.11 Resistência elétrica e resistividade.
+5.12 Relações entre grandezas elétricas: tensão, corrente, potência e energia.
+5.13 Circuitos elétricos simples.
+5.14 Correntes contínua e alternada.
+5.15 Medidores elétricos.
+5.16 Representação gráfica de circuitos.
+5.17 Símbolos convencionais.
+5.18 Potência e consumo de energia em dispositivos elétricos.
+5.19 Campo magnético.
+5.20 Ímãs permanentes.
+5.21 Linhas de campo magnético.
+5.22 Campo magnético terrestre.
+
+6 Oscilações, ondas, óptica e radiação:
+6.1 Feixes e frentes de ondas.
+6.2 Reflexão e refração.
+6.3 Óptica geométrica: lentes e espelhos.
+6.4 Formação de imagens.
+6.5 Instrumentos ópticos simples.
+6.6 Fenômenos ondulatórios.
+6.7 Pulsos e ondas.
+6.8 Período, frequência, ciclo.
+6.9 Propagação: relação entre velocidade, frequência e comprimento de onda.
+6.10 Ondas em diferentes meios de propagação.
+6.11 Índice de refração e Leis de Refração.
+
+7 O calor e os fenômenos térmicos:
+7.1 Conceitos de calor e de temperatura.
+7.2 Escalas termométricas.
+7.3 Transferência de calor e equilíbrio térmico.
+7.4 Capacidade calorífica e calor específico.
+7.5 Condução do calor.
+7.6 Dilatação térmica.
+7.7 Mudanças de estado físico e calor latente de transformação.
+7.8 Comportamento de Gases ideais.
+7.9 Máquinas térmicas.
+7.10 Ciclo de Carnot.
+7.11 Leis da Termodinâmica.
+7.12 Aplicações e fenômenos térmicos de uso cotidiano.
+7.13 Compreensão de fenômenos climáticos relacionados ao ciclo da água.
+
+QUÍMICA 
+
+1 ESTRUTURA DA MATÉRIA:
+1.1 Aspectos Macroscópicos: Substâncias simples e compostas; Mistura; Critérios de pureza; Métodos de separação dos Componentes de Misturas Homogêneas e Heterogêneas.
+1.2 Átomos e Moléculas: Elemento Químico; Estrutura Atômica; Isótonos, Isótopos, Isóbaros; Número atômico, número de massa; Massa atômica; N.o de Avogadro.
+1.3 Classificação Periódica dos Elementos: Propriedade dos elementos: gases nobres, metais, não-metais e semimetais; Configuração Eletrônica dos Elementos (exceção dos lantanídeos e dos actinídeos); Propriedades PERIÓDICAS.
+1.4 Ligação Química: Elétrons de valência; Ligação Iônica; Ligação Covalente; Ligação Metálica; FORÇAS INTERMOLECULARES.
+1.5 Fórmulas Químicas e Estruturas de Lewis; Nomenclatura das substâncias. N.º de oxidação de um elemento, conhecida sua fórmula molecular.
+1.6 Óxidos, Ácidos, Bases e Sais: Conceitos e propriedades de óxidos, ácidos, bases e sais; Fórmulas moleculares e estruturais; Conceitos de Arrhenius, Brönsted-Lowry e Lewis para ácidos e bases.
+1.7 Estados da Matéria: Sólido, líquido e gasoso; Volume molar; Gás ideal – Princípio de Avogadro; Mudanças de estado.
+1.8 Soluções:
+1.8.1 Conceito de solvente, soluto, fase, coeficiente de solubilidade.
+1.8.2 Solventes polares e apolares.
+1.8.3 Soluções iônicas e moleculares.
+1.8.4 Solução molar, fração molar.
+1.8.5 Unidades para exprimir a concentração das soluções.
+1.8.6 Preparo de soluções.
+1.8.7 Mistura de soluções.
+1.8.8 Cálculos envolvendo concentração, diluição e mistura de soluções - Diluição de soluções
+1.9 Estrutura Nuclear:
+1.9.1 Propriedades das emissões radioativas.
+1.9.2 Efeitos provocados pelas emissões radioativas: efeitos térmicos, efeitos de ionização e efeitos químicos.
+1.9.3 Variação do N.o de massa e N.o atômico com a emissão de partículas Alfa e Beta (leis de radioatividade).
+1.9.4 Radioatividade Natural e Artificial.
+1.9.5 Conceito de meia-vida, Riscos associados às radiações ionizantes e princípios de proteção radiológica.
+1.9.6 Fissão Nuclear.
+1.9.7 Fusão Nuclear.
+2 TRANSFORMAÇÃO DA MATÉRIA:
+2.1 Reações Químicas:
+2.1.1 Classificação das reações químicas: análise, síntese, dupla troca, simples troca, redox.
+2.1.2 Relação massa/volume numa reação química.
+2.1.3 Aplicação do conceito de rendimento de uma reação química.
+2.1.4 Balanceamento de equações Químicas.
+2.1.5 Estequiometria e cálculos estequiométricos.
+2.2 Efeitos Energéticos nas Reações Químicas:
+2.2.1 Aplicação do conceito de calor de reação, calor de formação, calor de decomposição e calor de combustão em problemas simples.
+2.2.2 Variação da entalpia - Aplicação do conceito de variação da entalpia e das reações químicas em problemas.
+2.2.3 Reações endotérmicas e exotérmicas.
+2.2.4 Conceito e aplicação da energia de ligação.
+2.2.5 Conceitos de Cinética Química: Conceito de energia de ativação; Diagrama de energia de ativação; Velocidade de reação; Fatores que alteram a velocidade da reação; Catalisadores.
+2.4 Equilíbrio Químico:
+2.4.1 Aspecto dinâmico do equilíbrio químico.
+2.4.2 Constante de equilíbrio em sistemas homogêneos e heterogêneos.
+2.4.3 Expressão do equilíbrio químico em função das concentrações molares.
+2.4.4 Expressão do equilíbrio químico em função das pressões parciais.
+2.4.5 Aplicação do Princípio de Le Chatelier.
+2.5 Solubilidade:
+2.5.1 Solubilidade de uma substância em um determinado solvente: Equilíbrio iônico.
+2.5.2 Solubilidade em água - produto de solubilidade.
+2.5.3 Constante do produto de solubilidade.
+2.5.4 Efeito de ion comum.
+2.5.5 Produto iônico de água.
+2.5.6 Hidrólise.
+2.5.7 pH e pOH.
+2.5.8 Solução tampão
+2.6 Reações de Oxi-Redução (redox):
+2.6.1 Agente redutor, agente oxidante.
+2.6.2 Mecanismo de uma célula eletroquímica galvânica.
+2.6.3 Potencial de uma célula eletroquímica galvânica.
+2.6.4 Balanceamento de reações de redox.
+2.6.5 Conceito de eletrólise em fusão e em solução aquosa.
+2.6.6 Mecanismos de uma célula eletrolítica (caracterização dos eletrodos).
+2.6.7 Corrosão e processos de oxidação.
+2.6.8 Leis de eletrólise.
+3 QUÍMICA ORGÂNICA:
+3.1 Características gerais:
+3.1.1 Características do átomo de carbono na formação de cadeias e ligações covalentes.
+3.1.2 Funções orgânicas: hidrocarbonetos, álcoois, fenóis, aldeídos, éteres, ésteres, cetonas, ácidos carboxílicos e seus derivados, compostos nitrogenados, compostos halogenados, compostos organometílicos e compostos sulfurados.
+3.1.3 Estrutura e reatividade química.
+3.2 Representação das Moléculas Orgânicas: Nomenclatura usual e IUPAC; Fórmulas gerais das diferentes funções orgânicas; Isomeria plana; Isomeria espacial.
+3.3 Ligação Química em Compostos Orgânicos.
+3.4 Acidez e Basicidade em Compostos Orgânicos: Ordem crescente e decrescente do seu caráter ácido.
+3.5 Estudo das Reações Orgânicas - Tipos de Reações; Solvente orgânicos.
+4 QUÍMICA APLICADA:
+4.1 Petróleo e combustíveis.
+4.2 Polímeros (Macromolecular):
+4.2.1 Exemplos de polímeros vinílicos (PVC, polietileno).
+4.2.2 Exemplos de polímeros acrílicos (lã sintética, etc).
+4.2.3 Exemplos de polímeros diênicos (borracha sintética).
+4.2.4 Propriedades físico-químicas de materiais poliméricos.
+4.3 Siderurgia: Diferença de composição química entre ferro gusa e o aço comum; Principais Reações químicas que ocorrem no processo de obtenção do ferro gusa e na sua transformação para aço comum.
+5 ASPECTOS QUÍMICOS DO FOGO E DA COMBUSTÃO.
+6 PRODUTOS QUÍMICOS:
+6.1 Substâncias inflamáveis, combustíveis, oxidantes, corrosivas, tóxicas e reativas.
+6.2 Propriedades.
+6.3 Reatividade química e incompatibilidade entre substâncias.
+6.4 Propriedades físico-químicas.
+6.5 Fichas com dados de segurança (FDS)
+7 ÁGUA: propriedades físico-químicas e aspectos do tratamento para consumo humano.
+
+BIOLOGIA
+
+1. Moléculas, células e tecidos:
+1.1 Estrutura e fisiologia celular: membrana, citoplasma e núcleo.
+1.2 Divisão celular.
+1.3 Aspectos bioquímicos das estruturas celulares.
+1.4 Aspectos gerais do metabolismo celular.
+1.5 Metabolismo energético: fotossíntese e respiração.
+1.6 Codificação da informação genética.
+1.7 Síntese proteica.
+1.8 Diferenciação celular.
+1.9 Principais tecidos animais e vegetais.
+1.10 Origem e evolução das células.
+1.11 Noções sobre células-tronco, clonagem e tecnologia do DNA recombinante.
+1.12 Terapia gênica.
+1.13 Aplicações de biotecnologia na produção de alimentos, fármacos e componentes biológicos.
+1.14 Aplicações de tecnologias relacionadas ao DNA, investigações científicas em investigações científicas, determinação da paternidade, investigação criminal e identificação de indivíduos.
+1.15 Aspectos éticos relacionados ao desenvolvimento biotecnológico.
+1.16 Biotecnologia e sustentabilidade.
+2. Identidade dos seres vivos:
+2.1 Evolução e padrões anatômicos e fisiológicos observados nos seres vivos.
+2.2 Diversidade biológica e classificação dos seres vivos.
+2.3 Funções vitais dos seres vivos e sua relação com a adaptação desses organismos a diferentes ambientes.
+2.4 Embriologia, anatomia e fisiologia humana.
+3. Ecologia e ciências ambientais:
+3.1 Ecossistemas.
+3.2 Fatores bióticos e abióticos.
+3.3 Habitat e nicho ecológico.
+3.4 A comunidade biológica: teia alimentar, sucessão e comunidade clímax.
+3.5 Dinâmica de populações.
+3.6 Interações entre os seres vivos.
+3.7 Ciclos biogeoquímicos.
+3.8 Fluxo de energia no ecossistema.
+3.9 Biogeografia.
+3.10 Biomas brasileiros.
+3.11 Exploração e uso de recursos naturais.
+3.12 Problemas ambientais: mudanças climáticas, efeito estufa, desmatamento, erosão, poluição da água, do solo, do ar e por microplásticos.
+3.13 Conservação e recuperação de ecossistemas.
+3.14 Conservação da biodiversidade.
+3.15 Serviços ecossistêmicos e sua relação com a conservação da biodiversidade e o bem-estar humano.
+3.16 Tecnologias ambientais.
+3.17 Noções de saneamento básico.
+3.18 Noções de legislação ambiental: água, florestas, unidades de conservação; biodiversidade.
+4. Qualidade de vida das populações humanas:
+4.1 Aspectos biológicos da pobreza e do desenvolvimento humano.
+4.2 Indicadores sociais, ambientais e econômicos.
+4.3 Índice de desenvolvimento humano.
+4.4 Principais doenças que afetam a população brasileira: caracterização, prevenção e profilaxia.
+4.5 Saúde Única: relações entre saúde humana, saúde animal e equilíbrio ambiental.
+4.6 Noções de primeiros socorros.
+4.7 Infecções Sexualmente Transmissíveis (IST).
+4.8 Aspectos sociais da biologia: uso indevido de drogas; obesidade.
+4.9 Saúde mental e bem-estar social.
+4.10 Aspectos biológicos do desenvolvimento sustentável
+
+
+DIREITO CONSTITUCIONAL
+
+1. Constituição: conceito; classificação; histórico e elementos.
+2. Estrutura da Constituição.
+3. Poder constituinte: conceito e titularidade; poder constituinte originário, derivado, difuso e supranacional; mutação, recepção, repristinação e desconstitucionalização.
+4. Eficácia e aplicabilidade das normas constitucionais.
+5. Controle de constitucionalidade.        
+5.1 Conceito; sistemas de controle de constitucionalidade.
+5.2 Momento de controle de constitucionalidade.
+5.3 Controle difuso e concentrado de constitucionalidade.
+5.4 Ação direta de inconstitucionalidade.
+5.5 Ação direta de inconstitucionalidade por omissão.
+5.6 Representação Interventiva.
+5.7 Ação declaratória de constitucionalidade.
+5.8 Arguição de descumprimento de preceito fundamental.
+6. Direitos e garantias fundamentais: direitos e deveres individuais e coletivos; direito à vida, à liberdade, à igualdade.
+7. Organização do Estado: forma de governo, sistema de governo e forma de Estado; federação brasileira; organização.
+8. Organização dos Poderes: Poder Legislativo; Poder Executivo; Poder Judiciário.
+9. Funções essenciais à justiça.
+10. Defesa do Estado e das instituições democráticas.
+11. Ordem social.
+12. Constituição do Estado de Pernambuco.
+13. Súmulas, jurisprudência dominante dos Tribunais Superiores e legislação relacionada com os temas.
+14. Lei Federal nº 8.069/1990 - Estatuto da Criança e do Adolescente (Acrescido pelo art. 1° da Lei n° 18.926, de 8 de outubro de 2025).
+15. Lei Federal nº 12.852/2013 - Estatuto da Juventude (Acrescido pelo art. 1° da Lei n° 18.926, de 8 de outubro de 2025).
+16. Lei Federal nº 11.340/2006 - Lei Maria da Penha (Acrescido pelo art. 1° da Lei n° 18.926, de 8 de outubro de 2025).
+
+
+DIREITO ADMINISTRATIVO 
+
+1. Estado, governo e administração pública.
+2. Direito Administrativo: conceito, fontes e princípios.
+3. Organização administrativa. 
+4. Agentes públicos (espécies, cargo, regime único).
+5. Poderes administrativos.
+6. Ato administrativo.
+7. Serviços públicos.
+8. Controle e responsabilização da administração.
+
+
+LEGISLAÇÕES PERTINENTES AOS MILITARES DO ESTADO DE PERNAMBUCO 
+
+1 Estadual 11.817, de 24 de julho de 2000 (Código Disciplinar dos Militares do Estado de Pernambuco):
+1.1 Do regime disciplinar.
+1.2 Das transgressões disciplinares militares.
+1.3 Das penas disciplinares e das medidas administrativas.
+1.4 Dos recursos disciplinares e das comissões recursais.
+1.5 Do cancelamento de penas e das recompensas.
+1.6 Das transgressões disciplinares em espécie.
+2 Decreto Estadual 50.014, de 22 de dezembro de 2020 (Regulamenta a Lei Estadual 11.817, de 24 de julho de 2000).
+3 Estadual 6.783, de 16 de outubro de 1974 (Estatuto dos Militares do Estado de Pernambuco):
+3.1 Da hierarquia e da disciplina.
+3.2 Do cargo e da função policiais-militares.
+3.3 Das obrigações e dos deveres policiais-militares.
+3.4 Dos direitos, das prerrogativas e do sistema de proteção social.
+3.5 Das situações especiais.
+3.6 Do desligamento ou exclusão do serviço ativo.
+3.7 Do tempo de serviço.
+4 Lei Estadual 15.187, de 12 de dezembro de 2013 (Dispõe sobre a Organização Básica do Corpo de Bombeiros Militar do Estado de Pernambuco):
+4.1 Generalidades.
+4.2 Organização básica do CBMPE.
+4.3 Das atribuições funcionais e orgânicas.
+4.4 Do pessoal.
+
+5 Lei Federal 14.751 de 12 de dezembro de 2023 (Lei Orgânica Nacional das Polícias Militares e dos Corpos de Bombeiros Militares dos Estados, do Distrito Federal e dos Territórios).
+
+DIREITO PENAL MILITAR 
+
+1 Da aplicação da Lei penal militar.
+2 Do crime.
+3 Da imputabilidade penal.
+4 Do concurso de agentes.
+5 Das penas.
+6 Das medidas de segurança.
+7 Da ação penal.
+8 Da extinção da punibilidade.
+9 Dos crimes militares em tempo de paz.
+10 Dos crimes militares em tempo de guerra.
+11 Súmulas, jurisprudência dominante dos Tribunais Superiores.
+
+
