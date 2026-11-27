@@ -1,0 +1,13 @@
+﻿bloco;disciplina;nivel;questoes_na_prova;simulado_1;simulado_2;simulado_3;media;meta;peso_por_disciplina;parte_do_tempo_pct;horas_em_222h
+I;Língua Portuguesa;N2;5;2;3;2;2,33;3,5;alto;9,0;20
+I;Espanhol;N3;5;3;3;5;3,67;4,3;baixo;3,6;8
+I;Informática;N3;5;4;3;5;4,00;4,3;baixo;3,6;8
+I;Estatística;N2;5;1;2;2;1,67;2,5;médio;6,1;14
+II;Matemática;N2;5;1;2;1;1,33;2,5;médio;6,1;14
+II;Física;N2;5;1;1;1;1,00;2,5;médio;6,1;14
+II;Química;N2;5;2;1;2;1,67;3,3;alto;9,0;20
+II;Biologia;N3;5;4;3;1;2,67;3,3;médio;6,1;14
+III;Direito Constitucional;N3;8;5;4;5;4,67;6,3;alto;14,6;32
+III;Direito Administrativo;N3;7;6;4;3;4,33;5,5;médio;8,6;19
+III;Legislação Militar PE;N1;10;4;5;5;4,67;7,5;alto;18,2;40
+III;Direito Penal Militar;N1;5;3;2;2;2,33;3,8;alto;9,0;20
