@@ -1,5 +1,8 @@
 # Fase 1 — Diagnóstico de incidência: Instituto AOCP × edital CBMPE (2º Tenente · Oficial)
 
+> **Atualização (Fase 2):** algumas contagens e a seção 3 deste relatório foram corrigidas com os cadernos de questões. Física (75), Direito Administrativo (69) e Ordem social eram *leituras erradas minhas*, não inconsistências do PDF; Estatística tem 10 questões e Matemática 58. Valem as correções e o ranking de `relatorio-fase2-questoes-cbmpe.md`.
+
+
 Base: histórico de aplicações da AOCP em concursos de carreiras policiais de nível superior (PDF "Histórico — Carreiras Policiais — Instituto AOCP — Nível Superior"), cruzado com os tópicos das 12 disciplinas do edital da Amanda e com o número de questões de cada uma na prova (70 questões objetivas, 1 ponto cada).
 
 > Este relatório só ordena **o que atacar e em que ordem**. Horas, ciclo e cronograma ficam para as próximas fases.
