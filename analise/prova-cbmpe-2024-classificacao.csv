@@ -1,0 +1,71 @@
+﻿questao;disciplina;tema;itens_do_edital_2026;faixa_prevista_pelo_historico;cenario_bombeiro;anulada
+1;Língua Portuguesa;Interpretação de textos (compreensão);1;Piso;;
+2;Língua Portuguesa;Conjunções (classe e relações de sentido);4, 7;Piso;;
+3;Língua Portuguesa;Tipologia e gênero textual;2;B;;
+4;Língua Portuguesa;Sintaxe: termos da oração e orações subordinadas;9;A;;
+5;Língua Portuguesa;Redação oficial: atributos do texto (Manual da Presidência);sem item;Sem histórico;;
+6;Espanhol;Interpretação de textos;1;Piso;;
+7;Espanhol;Gramática mista (contração, tempos verbais, acentuação, locuções);1, 5, 9;Sem histórico;;
+8;Espanhol;Advérbios;6, 10;B;;
+9;Espanhol;Verbos;5;Piso;;
+10;Espanhol;Preposições;7, 8;B;;
+11;Informática;Windows 11 (sistemas operacionais);4, 6;M;sim;
+12;Informática;Hardware e periféricos;5.1, 5.2;M;sim;
+13;Informática;Ameaças (vírus, worms, trojans, malware);3;Piso;;
+14;Informática;Windows 11 (sistemas operacionais);6;M;;sim
+15;Informática;Planilhas (Excel 2019/365 e Calc);7;A;;sim
+16;Estatística;Distribuição de Poisson (variável aleatória discreta);3;Sem histórico;;
+17;Estatística;Coeficiente de variação e variância relativa;4;Piso;sim;
+18;Estatística;Teste t de Student (testes de hipóteses);5;Sem histórico;sim;
+19;Estatística;Distribuição de Poisson (variável aleatória discreta);3;Sem histórico;sim;
+20;Estatística;Regressão linear (ajuste, ANOVA, R²);6;Sem histórico;sim;
+21;Matemática;Probabilidade: problemas introdutórios (equiprováveis, frequentista);3;Piso;sim;
+22;Matemática;Porcentagem;1;M;sim;
+23;Matemática;Função do 2º grau;4;M;;
+24;Matemática;Geometria analítica: reta e circunferência (plano cartesiano);5;Sem histórico;;
+25;Matemática;Cilindros;2;A;;
+26;Física;Ótica: conceitos iniciais;6;M;;
+27;Física;Cinemática vetorial;1, 2;Sem histórico;sim;
+28;Física;Termologia: temperatura, calor, dilatação, 1ª lei;7;Piso;;
+29;Física;Eletromagnetismo (ímãs e campo magnético);5.19 a 5.22;M;;sim
+30;Física;Gravitação universal;4;Sem histórico;;
+31;Química;Eletroquímica (Nox, redox, pilhas, eletrólise);2.6;M;;
+32;Química;Funções inorgânicas (ácidos, bases, sais, óxidos);1.6, 2.5;A;;
+33;Química;Solubilidade e coeficiente de solubilidade;1.8, 2.5;B;;
+34;Química;Concentração, diluição e mistura de soluções;1.8;Piso;sim;
+35;Química;Equilíbrio iônico: eletrólitos, pH/pOH, hidrólise, tampão, Kps;2.5;Piso;;
+36;Biologia;Engenharia genética e DNA recombinante;1.11;B;;
+37;Biologia;Origem da vida e evolução do metabolismo;1.5;B;;sim
+38;Biologia;Anatomia e fisiologia humanas (sistemas);2.4;Piso;sim;
+39;Biologia;Anatomia e fisiologia humanas (sistemas);2.4;Piso;;
+40;Biologia;Ecologia (populações, ciclos, ecossistemas, sucessão);3;Piso;sim;sim
+41;Direito Constitucional;CF · Segurança pública (art. 144);10;M;sim;
+42;Direito Constitucional;CE-PE · Constituição do Estado de Pernambuco;12;B;sim;
+43;Direito Constitucional;CF · Direitos sociais;6;M;;
+44;Direito Constitucional;CF · Poder Legislativo;8;Piso;;
+45;Direito Constitucional;CF · Poder constituinte;3;M;;
+46;Direito Constitucional;CF · Administração Pública: disposições gerais (arts. 37 a 38);7;Piso;;
+47;Direito Constitucional;CF · Poder Judiciário;8;A;;
+48;Direito Constitucional;CF · Poder Legislativo;8;Piso;;
+49;Direito Administrativo;Organização: descentralização e desconcentração;3;M;;
+50;Direito Administrativo;Atos: elementos e requisitos;6;M;;
+51;Direito Administrativo;Poderes administrativos e abuso de poder;5;Piso;sim;
+52;Direito Administrativo;Responsabilidade civil do Estado;8;A;;
+53;Direito Administrativo;Atos: espécies, classificação e formação;6;M;;
+54;Direito Administrativo;Organização administrativa: administração indireta;3;Piso;;
+55;Direito Administrativo;Princípios implícitos;2;M;;
+56;Legislação Pertinente aos Militares de Pernambuco;Código Disciplinar (Lei 11.817/2000): transgressão, tempo, resultado, tentativa;1.2;Sem histórico;;
+57;Legislação Pertinente aos Militares de Pernambuco;Código Disciplinar: dever de agir diante de transgressão;1.1;Sem histórico;;
+58;Legislação Pertinente aos Militares de Pernambuco;Código Disciplinar: justificação (ação meritória);1.2;Sem histórico;;
+59;Legislação Pertinente aos Militares de Pernambuco;Código Disciplinar: comissões recursais;1.4;Sem histórico;;
+60;Legislação Pertinente aos Militares de Pernambuco;Código Disciplinar: recursos disciplinares;1.4;Sem histórico;;
+61;Legislação Pertinente aos Militares de Pernambuco;Estatuto (Lei 6.783/1974): cargo e função policial-militar;3.2;A;;
+62;Legislação Pertinente aos Militares de Pernambuco;Estatuto: hierarquia e disciplina;3.1;A;;
+63;Legislação Pertinente aos Militares de Pernambuco;Estatuto: prerrogativas;3.4;A;;
+64;Legislação Pertinente aos Militares de Pernambuco;Estatuto: situações especiais;3.5;A;;
+65;Legislação Pertinente aos Militares de Pernambuco;Estatuto: ética policial-militar;3.3;A;;
+66;Direito Penal Militar;Parte Geral · Extinção da punibilidade (arts. 123 a 135);8;A;;
+67;Direito Penal Militar;Parte Geral · Extinção da punibilidade (arts. 123 a 135);8;A;;
+68;Direito Penal Militar;Crimes militares em tempo de guerra (favorecimento ao inimigo);10;Sem histórico;;
+69;Direito Penal Militar;Parte Geral · Do crime (arts. 29 a 47);2;Piso;;
+70;Direito Penal Militar;Parte Geral · Concurso de agentes;4;Sem histórico;;
