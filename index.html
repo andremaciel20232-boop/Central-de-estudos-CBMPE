@@ -911,10 +911,28 @@
     .fi-asp { font-size: 44px; line-height: .6; font-weight: 800; color: var(--t-foco, var(--brand)); height: 20px; font-family: Georgia, serif; }
     .fi-frase { margin: 0; font-size: 17px; line-height: 1.5; font-style: italic; font-weight: 500; } .fi-ref { font-size: 13px; font-weight: 800; color: var(--t-foco, var(--brand)); }
     .fi-nova { justify-self: end; min-height: 44px; border-radius: 99px; border: 1px solid var(--border-color); background: var(--bg-panel); color: var(--t-foco, var(--brand)); display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; font-weight: 800; font-size: 13px; cursor: pointer; } .fi-nova:hover { background: var(--bg-hover); } .fi-nova:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
-    .fi-semfoto { font-size: 12.5px; color: var(--text-secondary); margin: 0; }
     @container fi (max-width: 559px) { .fi-faixa { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .fi-foto { aspect-ratio: 4 / 5; } }
     @container fi (min-width: 560px) { .fi-frase { font-size: 19px; } }
     #visualizador-print[data-sem-dados] .vz-dados { display: none; }
+    /* fotos do mural editáveis */
+    .fi-cab { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+    .fi-edbt { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border-radius: 99px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 700; font-size: 12.5px; cursor: pointer; }
+    .fi-edbt:hover { background: var(--bg-hover); } .fi-edbt[aria-pressed="true"] { background: var(--btn-iniciar-bg); color: var(--btn-iniciar-fg); border-color: var(--btn-iniciar-bg); }
+    .fi-edbt:focus-visible, .fi-bt:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+    .fi-item { display: grid; gap: 6px; min-width: 0; align-content: start; }
+    .fi-ctl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; } .fi-ctl .fi-bt { min-width: 0; } .fi-ctl .fi-bt:last-child { grid-column: 1 / -1; }
+    .fi-bt { min-height: 44px; min-width: 44px; padding: 0 10px; border-radius: 12px; border: 1px solid var(--border-color); background: var(--bg-panel); color: var(--text-primary); font-weight: 700; font-size: 12.5px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; }
+    .fi-bt:hover:not(:disabled) { background: var(--bg-hover); } .fi-bt:disabled { opacity: .45; cursor: default; }
+    .fi-extra { display: grid; gap: 8px; justify-items: start; } .fi-extra[hidden] { display: none; } .fi-dica { font-size: 12.5px; color: var(--text-secondary); margin: 0; line-height: 1.4; }
+    .fi-vazio { display: none; position: absolute; inset: 0; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px; text-align: center; font-size: 12.5px; font-weight: 700; color: var(--text-secondary); }
+    .fi-vazio i { font-size: 22px; } .fi-item.sem-foto .fi-vazio { display: flex; } .fi-item.sem-foto .fi-foto img, .fi-item.sem-foto .fi-lupa { display: none; } .fi-item.sem-foto .fi-foto { cursor: default; border-style: dashed; }
+    /* data da prova editável */
+    .hr-lk { grid-column: 2; justify-self: start; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; padding: 0 4px; color: #e2e8f0; font-size: 12.5px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; border-radius: 8px; }
+    .hr-lk:hover { color: #fff; } .hr-lk:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+    .hr-cont.sem-data .hr-n { font-size: 28px; line-height: 1.1; }
+    .hr-prova-ed { display: grid; gap: 8px; padding: 12px 14px; } .hr-prova-ed[hidden] { display: none; }
+    .hr-ed-bt { display: flex; flex-wrap: wrap; gap: 8px; }
+    @container hr (min-width: 760px) { .hr-cont .hr-lk { grid-column: auto; } }
     /* ===== CBMPE: alerta de eliminação (30% mínimo) e peso por disciplina ===== */
     @media (min-width: 768px) { .dash-esq > #el { grid-column: 1 / -1; } }
     @media (min-width: 1024px) { .dash-esq > #el { grid-column: auto; margin-top: 16px; } }
@@ -1004,7 +1022,12 @@
               <div class="hr-seq"><div class="hr-painel" id="hr-painel"></div></div>
             </div>
             <div class="hr-lado">
-              <div class="hr-vidro hr-cont"><span class="hr-lbl">Faltam</span><span class="hr-n" id="hr-dias">--</span><span class="hr-lbl" id="hr-dias-txt">dias para a prova</span><span class="hr-apoio hr-prova" id="hr-prova-txt">2º Tenente · CBMPE · 28/02/2027</span></div>
+              <div class="hr-vidro hr-cont" id="hr-cont"><span class="hr-lbl" id="hr-dias-rot">Faltam</span><span class="hr-n" id="hr-dias">--</span><span class="hr-lbl" id="hr-dias-txt">dias para a prova</span><span class="hr-apoio hr-prova" id="hr-prova-txt">2º Tenente · CBMPE · 28/02/2027</span><button type="button" class="hr-lk" id="hr-prova-btn" onclick="abrirEditarProva()" aria-expanded="false" aria-controls="hr-prova-ed"><i class="fa-solid fa-pen" aria-hidden="true"></i> <span>Alterar data</span></button></div>
+              <form class="hr-vidro hr-prova-ed" id="hr-prova-ed" hidden onsubmit="salvarDataProva(event)">
+                <label class="hr-lbl" for="hr-prova-in">Data da prova</label>
+                <input type="date" id="hr-prova-in" class="ms-campo" required>
+                <div class="hr-ed-bt"><button type="submit" class="ms-bt pri">Salvar</button><button type="button" class="ms-bt" onclick="limparDataProva()">Limpar data</button><button type="button" class="ms-bt" onclick="fecharEditarProva()">Cancelar</button></div>
+              </form>
               <div class="hr-duo">
                 <button type="button" class="hr-vidro hr-mini" id="hr-btn-tempo" onclick="navigate('historico')" aria-label="Tempo total de estudo. Abrir o Histórico">
                   <div class="hr-lin"><span class="hr-ico2 az"><svg aria-hidden="true"><use href="#hr-relogio"/></svg></span><div class="hr-tx"><span class="hr-lbl">Tempo total de estudo</span><span class="hr-val" id="hr-tempo">0h 0m</span></div></div>
@@ -1054,7 +1077,7 @@
                 <button type="button" id="lem-abrir" class="ms-bt larga" onclick="alternarFormLembrete()" aria-expanded="false" aria-controls="lem-form"><i class="fa-solid fa-plus" aria-hidden="true"></i> Novo lembrete</button>
                 <div id="lem-form" hidden>
                   <div class="mu-linha">
-                    <input id="lem-texto" type="text" placeholder="Ex: Pagar inscrição / Prova 28/02" aria-label="Texto do lembrete" class="ms-campo">
+                    <input id="lem-texto" type="text" placeholder="Ex: Pagar inscrição" aria-label="Texto do lembrete" class="ms-campo">
                     <input id="lem-data" type="date" aria-label="Data do lembrete" oninput="marcarAtalhoLembrete()" class="ms-campo">
                     <div class="mu-atalhos" role="group" aria-label="Atalhos de data"><span class="mu-rot">Data:</span><button type="button" data-at="hoje" onclick="lembreteAtalho('hoje')">Hoje</button><button type="button" data-at="amanha" onclick="lembreteAtalho('amanha')">Amanhã</button><button type="button" data-at="semana" onclick="lembreteAtalho('semana')">Em 1 semana</button></div>
                     <button type="button" onclick="adicionarLembrete()" class="ms-bt pri larga">+ Lembrete</button>
@@ -1064,14 +1087,11 @@
             </section>
 
             <section id="fi" class="fi" aria-label="Minha Força e Inspiração">
-              <h3 class="fi-t"><i class="fa-solid fa-heart" aria-hidden="true"></i> Minha Força &amp; Inspiração</h3>
+              <div class="fi-cab"><h3 class="fi-t"><i class="fa-solid fa-heart" aria-hidden="true"></i> Minha Força &amp; Inspiração</h3><button type="button" class="fi-edbt" id="fi-editar" aria-pressed="false" onclick="alternarEdicaoMural()"><i class="fa-solid fa-pen" aria-hidden="true"></i> <span>Editar fotos</span></button></div>
               <div class="fi-faixa" id="fi-faixa">
-                <button type="button" class="fi-foto" onclick="ampliarFoto(this)" aria-label="Ampliar a foto 1"><img src="img/foto1.jpg" alt="Inspiração 1" decoding="async"><span class="fi-lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
-                <button type="button" class="fi-foto" onclick="ampliarFoto(this)" aria-label="Ampliar a foto 2"><img src="img/foto2.jpg" alt="Inspiração 2" decoding="async"><span class="fi-lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
-                <button type="button" class="fi-foto" onclick="ampliarFoto(this)" aria-label="Ampliar a foto 3"><img src="img/foto3.jpg" alt="Inspiração 3" decoding="async"><span class="fi-lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
-                <button type="button" class="fi-foto" onclick="ampliarFoto(this)" aria-label="Ampliar a foto 4"><img src="img/foto4.jpg" alt="Inspiração 4" decoding="async"><span class="fi-lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
               </div>
-              <p class="fi-semfoto" id="fi-semfoto" hidden>As fotos não foram encontradas. Coloque foto1.jpg a foto4.jpg na pasta img.</p>
+              <div class="fi-extra" id="fi-extra" hidden><p class="fi-dica">Use as setas para mudar a posição e <b>Trocar</b> para escolher outra foto do aparelho. As fotos trocadas ficam neste navegador e vão no backup.</p><button type="button" class="fi-bt" onclick="restaurarFotosMural()"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Voltar às fotos originais</button></div>
+              <input type="file" id="fi-arquivo" accept="image/*" class="hidden" onchange="fotoMuralEscolhida(event)" aria-hidden="true" tabindex="-1">
               <figure class="fi-cit">
                 <span class="fi-asp" aria-hidden="true">“</span>
                 <blockquote class="fi-frase" id="versiculo-diario"></blockquote>
@@ -1671,7 +1691,9 @@
   // =====================================================================
   // 1. FRASES E TEMA
   // =====================================================================
-  // Data da prova: único lugar. Contagem regressiva, Montar ciclo e textos usam esta constante.
+  // Data da prova. DATA_PROVA é só o valor inicial. A Amanda pode mudar ou limpar (preferencias.dataProva):
+  // ausente = valor inicial; '' = "data a definir" (não volta sozinha); 'aaaa-mm-dd' = data escolhida.
+  // Painel, Montar ciclo e previsão do Cronograma leem sempre de dataProvaAtual().
   const DATA_PROVA = '2027-02-28';
   const versiculos = [
     { texto: '"Pois o Senhor dá sabedoria; da sua boca vêm o conhecimento e o entendimento."', ref: '— Provérbios 2:6' },
@@ -1694,35 +1716,74 @@
     const ref = document.getElementById('versiculo-ref');
     ref.innerText = v.ref; ref.hidden = !v.ref;
   }
-  // Minha Força: foto que não carrega some do desenho; sem nenhuma, aparece um aviso
-  function ajustarFaixaFotos() {
-    const f = document.getElementById('fi-faixa'); if (!f) return;
-    const n = f.querySelectorAll('.fi-foto').length;
-    f.style.setProperty('--n', Math.max(1, n)); f.hidden = n === 0;
-    document.getElementById('fi-semfoto').hidden = n > 0;
+  // ---------- Minha Força & Inspiração: a Amanda pode mudar a posição e trocar cada foto ----------
+  // preferencias.fotosMural: lista de 4 posições. { o: n } = foto original img/fotoN.jpg; { i: 'mural_...' } = foto escolhida por ela,
+  // guardada no IndexedDB (banco de imagens da Amanda) e incluída no backup. Sem a lista, valem as 4 originais.
+  let muralEditando = false, muralAssin = '', muralAlvo = null;
+  function fotosMuralAtual() {
+    const v = preferencias.fotosMural;
+    const ok = Array.isArray(v) && v.length === 4 && v.every(s => s && ((Number.isInteger(s.o) && s.o >= 1 && s.o <= 4) || (typeof s.i === 'string' && /^mural_[\w-]+$/.test(s.i))));
+    return (ok ? v : [1, 2, 3, 4].map(n => ({ o: n }))).map(s => ({ ...s }));
   }
-  function vigiarFotos() {
-    document.querySelectorAll('#fi-faixa .fi-foto img').forEach(img => {
-      const tirar = () => { const b = img.closest('.fi-foto'); if (b) b.remove(); ajustarFaixaFotos(); };
-      if (img.complete && img.naturalWidth === 0) tirar(); else img.addEventListener('error', tirar, { once: true });
+  function itemMuralSemFoto(item) {
+    item.classList.add('sem-foto');
+    const b = item.querySelector('.fi-foto'); if (b) { b.disabled = true; b.setAttribute('aria-label', 'Foto não encontrada'); }
+  }
+  function renderizarMuralFotos(forcar) {
+    const faixa = document.getElementById('fi-faixa'); if (!faixa) return;
+    const slots = fotosMuralAtual(), assin = JSON.stringify(slots) + '|' + muralEditando;
+    if (!forcar && assin === muralAssin) return;
+    muralAssin = assin;
+    const bt = document.getElementById('fi-editar');
+    bt.setAttribute('aria-pressed', String(muralEditando)); bt.querySelector('span').textContent = muralEditando ? 'Concluir' : 'Editar fotos';
+    document.getElementById('fi-extra').hidden = !muralEditando;
+    faixa.innerHTML = slots.map((s, k) => `<div class="fi-item" data-fk="${k}">
+      <button type="button" class="fi-foto" onclick="ampliarFoto(this)" aria-label="Ampliar a foto ${k + 1}"><img alt="Inspiração ${k + 1}" decoding="async" ${s.o ? `src="img/foto${s.o}.jpg"` : ''}><span class="fi-vazio" aria-hidden="true"><i class="fa-regular fa-image"></i>Foto não encontrada</span><span class="fi-lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+      ${muralEditando ? `<div class="fi-ctl"><button type="button" class="fi-bt ic" data-m="-1" onclick="moverFotoMural(${k}, -1)" aria-label="Mover a foto ${k + 1} para antes" ${k === 0 ? 'disabled' : ''}><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button><button type="button" class="fi-bt ic" data-m="1" onclick="moverFotoMural(${k}, 1)" aria-label="Mover a foto ${k + 1} para depois" ${k === slots.length - 1 ? 'disabled' : ''}><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" class="fi-bt" data-m="t" onclick="trocarFotoMural(${k})" aria-label="Trocar a foto ${k + 1}"><i class="fa-solid fa-image" aria-hidden="true"></i> Trocar</button></div>` : ''}</div>`).join('');
+    slots.forEach((s, k) => {
+      const item = faixa.querySelector(`[data-fk="${k}"]`), img = item.querySelector('img');
+      img.addEventListener('error', () => itemMuralSemFoto(item), { once: true });
+      if (s.i) idbGet(s.i).then(d => { if (d) img.src = d; else itemMuralSemFoto(item); }).catch(() => itemMuralSemFoto(item));
     });
-    ajustarFaixaFotos();
+  }
+  function alternarEdicaoMural() { muralEditando = !muralEditando; renderizarMuralFotos(); const b = document.getElementById('fi-editar'); if (b) b.focus({ preventScroll: true }); }
+  function focarControleMural(k, m) {
+    const alvo = document.querySelector(`#fi-faixa [data-fk="${k}"] .fi-bt[data-m="${m}"]:not(:disabled)`) || document.querySelector(`#fi-faixa [data-fk="${k}"] .fi-bt[data-m="t"]`);
+    if (alvo) alvo.focus({ preventScroll: true });
+  }
+  function moverFotoMural(k, d) {
+    const s = fotosMuralAtual(), j = k + d;
+    if (j < 0 || j >= s.length) return;
+    [s[k], s[j]] = [s[j], s[k]];
+    preferencias.fotosMural = s; salvarTudo(); renderizarMuralFotos(); focarControleMural(j, d);
+  }
+  function trocarFotoMural(k) { muralAlvo = k; const i = document.getElementById('fi-arquivo'); i.value = ''; i.click(); }
+  async function fotoMuralEscolhida(ev) {
+    const f = ev.target.files[0], k = muralAlvo; ev.target.value = '';
+    if (!f || k === null) return;
+    if (!/^image\//.test(f.type)) { alert('Escolha um arquivo de imagem (JPG, PNG ou WebP).'); return; }
+    let dataUrl; try { dataUrl = await comprimirImagem(f, 1000, 0.8); } catch (e) { alert('Não foi possível ler esta imagem. Tente outra.'); return; }
+    const id = 'mural_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+    try { await idbPut(id, dataUrl); } catch (e) { alert('Não foi possível guardar a foto neste navegador (espaço cheio ou navegação privada). A foto anterior foi mantida.'); return; }
+    const s = fotosMuralAtual(), velho = s[k].i;
+    s[k] = { i: id }; preferencias.fotosMural = s; salvarTudo(); renderizarMuralFotos();
+    if (velho) idbDel(velho).catch(() => {});
+    focarControleMural(k, 't');
+  }
+  function restaurarFotosMural() {
+    if (!confirm('Voltar às 4 fotos originais, na ordem original? As fotos que você escolheu serão removidas deste navegador. Faça um backup antes, se quiser guardá-las.')) return;
+    const velhas = fotosMuralAtual().filter(s => s.i).map(s => s.i);
+    delete preferencias.fotosMural; salvarTudo(); renderizarMuralFotos();
+    velhas.forEach(id => idbDel(id).catch(() => {}));
   }
   function ampliarFoto(btn) {
-    const todas = [...document.querySelectorAll('#fi-faixa .fi-foto')];
+    const todas = [...document.querySelectorAll('#fi-faixa .fi-item:not(.sem-foto) .fi-foto')];
     const itens = todas.map((b, k) => { const im = b.querySelector('img'); return { src: im.currentSrc || im.src, nome: `inspiracao-${k + 1}.jpg` }; });
     abrirVisualizadorPrint(itens, todas.indexOf(btn), { tipo: 'Foto' }, btn);
   }
   function trocarVersiculoManual() {
     versiculoIdx = (versiculoIdx + 1) % versiculos.length;
     atualizarVersiculo();
-  }
-  function atualizarCountdown() {
-    const alvo = new Date(DATA_PROVA + 'T00:00:00');
-    const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
-    const diff = Math.ceil((alvo - hoje) / 86400000);
-    const hrDias = document.getElementById('hr-dias');
-    if (hrDias) { hrDias.textContent = diff > 0 ? diff : 0; document.getElementById('hr-dias-txt').textContent = diff > 1 ? 'dias para a prova' : diff === 1 ? 'dia para a prova' : 'A prova chegou!'; }
   }
   function toggleTheme() {
     const isLight = document.body.classList.toggle('light-mode');
@@ -2633,6 +2694,7 @@
     renderizarLembretes();
     renderizarPlanoDia();
     renderizarAlertaEliminacao();
+    renderizarMuralFotos();
     renderizarVitrineErros();
     if (visivel('erros-disc')) renderizarMuralErros();
     if (visivel('view-cronograma')) { renderizarCronograma(); renderizarMontarCiclo(); }
@@ -2676,11 +2738,37 @@
   }
 
   // ---- Herói do Dashboard (só leitura: usa registros, histórico diário e edital já salvos) ----
+  function dataProvaAtual() {
+    const v = preferencias.dataProva;
+    if (v === undefined || v === null) return DATA_PROVA;
+    return /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : '';
+  }
+  // dias até a prova; null quando a data está "a definir"
   function diasParaProva() {
-    const alvo = new Date(DATA_PROVA + 'T00:00:00');
+    const dp = dataProvaAtual(); if (!dp) return null;
+    const alvo = new Date(dp + 'T00:00:00');
     const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
     return Math.ceil((alvo - hoje) / 86400000);
   }
+  function abrirEditarProva() {
+    const f = document.getElementById('hr-prova-ed'), b = document.getElementById('hr-prova-btn');
+    if (!f.hidden) return fecharEditarProva();
+    document.getElementById('hr-prova-in').value = dataProvaAtual();
+    f.hidden = false; b.setAttribute('aria-expanded', 'true');
+    document.getElementById('hr-prova-in').focus();
+  }
+  function fecharEditarProva() {
+    document.getElementById('hr-prova-ed').hidden = true;
+    const b = document.getElementById('hr-prova-btn'); b.setAttribute('aria-expanded', 'false'); b.focus();
+  }
+  function definirDataProva(iso) { preferencias.dataProva = iso; salvarTudo(); }
+  function salvarDataProva(ev) {
+    ev.preventDefault();
+    const v = document.getElementById('hr-prova-in').value;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return;
+    definirDataProva(v); fecharEditarProva();
+  }
+  function limparDataProva() { definirDataProva(''); fecharEditarProva(); }
   // =====================================================================
   // Alerta de eliminação: 30% mínimo em cada bloco e no total da objetiva (opcional, desligado por padrão)
   // Projeção = % de acerto registrado nos tópicos da disciplina (acertos ÷ questões feitas) × pontos da disciplina na prova.
@@ -2785,10 +2873,13 @@
       + `<div class="hr-dias" role="img" aria-label="${aria}">${celulas.join('')}</div>`
       + `<div class="hr-leg"><span class="v">${hrIcone('ok')}<span>Dia completo (${MIN_CONSTANCIA} min)</span></span><span class="r">${hrIcone('x')}<span>Dia perdido</span></span><span class="l">${hrIcone('hoje')}<span>Hoje</span></span>${neutros ? `<span class="n">${hrIcone('vazio')}<span>Antes de começar</span></span>` : ''}</div>`;
     // contagem, tempo e edital (mesmos números dos cartões atuais)
-    const diff = diasParaProva();
-    const tp = document.getElementById('hr-prova-txt'); if (tp) tp.textContent = '2º Tenente · CBMPE · ' + formatarDataBR(DATA_PROVA);
-    document.getElementById('hr-dias').textContent = diff > 0 ? diff : 0;
-    document.getElementById('hr-dias-txt').textContent = diff > 1 ? 'dias para a prova' : diff === 1 ? 'dia para a prova' : 'A prova chegou!';
+    const dp = dataProvaAtual(), diff = diasParaProva();
+    document.getElementById('hr-cont').classList.toggle('sem-data', !dp);
+    document.getElementById('hr-dias-rot').textContent = dp ? 'Faltam' : 'Data da prova';
+    document.getElementById('hr-prova-txt').textContent = '2º Tenente · CBMPE · ' + (dp ? formatarDataBR(dp) : 'data a definir');
+    document.getElementById('hr-dias').textContent = dp ? (diff > 0 ? diff : 0) : 'A definir';
+    document.getElementById('hr-dias-txt').textContent = !dp ? 'Toque em Definir data' : diff > 1 ? 'dias para a prova' : diff === 1 ? 'dia para a prova' : 'A prova chegou!';
+    document.querySelector('#hr-prova-btn span').textContent = dp ? 'Alterar data' : 'Definir data';
     const { total, conc, min } = totaisDoEdital();
     const pc = total ? Math.round((conc / total) * 100) : 0;
     document.getElementById('hr-tempo').textContent = `${Math.floor(min / 60)}h ${min % 60}m`;
@@ -3628,7 +3719,7 @@
   // ---------- Fase 2: previsão "No seu ritmo" (minutos registrados de verdade × plano do Montar ciclo) ----------
   function previsaoRitmo() {
     const p = cronograma.plano;
-    if (!p || !p.ultimoUso || !cronograma.dias.length) return null;   // só depois de montar o ciclo pelo Montar ciclo
+    if (!dataProvaAtual() || !p || !p.ultimoUso || !cronograma.dias.length) return null;   // só depois de montar o ciclo pelo Montar ciclo
     const hoje = hojeISO(), datas = registrosEstudo.map(r => r.data).filter(x => x && x <= hoje).sort();
     if (!datas.length) return null;
     const uso = Math.round((mcS2d(hoje) - mcS2d(datas[0])) / 864e5) + 1;
@@ -3686,7 +3777,6 @@
   // A configuração fica em cronograma.plano (mesma chave de dados; vai no Backup).
   // O calendário serve só para a conta das horas: a fila de blocos não depende do dia da semana.
   // =====================================================================
-  const MC_DATA_PROVA = DATA_PROVA;
   const MC_F_PESO = { alto: 1.5, medio: 1.0, baixo: 0.6 };
   const MC_F_DIAG = { nao_estudado: 1.5, revisar: 1.3, dominio: 0.6, menor: 0.4 };
   const MC_CORES = { portugues: '#7c3aed', espanhol: '#c2410c', informatica: '#0f766e', estatistica: '#4338ca', matematica: '#2563eb', fisica: '#0e7490', quimica: '#4d7c0f', biologia: '#15803d', constitucional: '#be123c', administrativo: '#7e22ce', legislacao_pe: '#b45309', penal_militar: '#475569' };
@@ -3707,7 +3797,7 @@
   const mcMin = m => { m = Math.round(m); const h = Math.floor(m / 60), r = m % 60; return h ? `${h}h${r ? String(r).padStart(2, '0') : ''}` : `${r} min`; };
 
   function planoPadrao() {
-    return { questoes: {}, horasSemana: [0, 3, 3, 3, 3, 3, 3], inicio: null, fim: MC_DATA_PROVA, revisaoFinal: true, descanso: [], garantir: true, tempoTopico: 60,
+    return { questoes: {}, horasSemana: [0, 3, 3, 3, 3, 3, 3], inicio: null, fim: '', revisaoFinal: true, descanso: [], garantir: true, tempoTopico: 60,
       ajustes: {}, letrasModo: 'auto', letrasFixo: 3, bloco: null, outro: 50 };
   }
   // completa o rascunho no próprio objeto (sem trocar a referência)
@@ -3719,7 +3809,7 @@
     if (!Array.isArray(p.descanso)) p.descanso = [];
     if (!p.questoes || typeof p.questoes !== 'object') p.questoes = {};
     if (!p.ajustes || typeof p.ajustes !== 'object') p.ajustes = {};
-    if (!p.fim) p.fim = MC_DATA_PROVA;
+    p.fim = dataProvaAtual();   // cópia da data única (preferencias.dataProva); '' = a definir
     return p;
   }
   // rascunho: grava sem redesenhar a plataforma inteira
@@ -3741,7 +3831,9 @@
     return { nec: Math.min(2, Math.max(0.5, soma / pend.length * fd)), pend: pend.length };   // limitada entre 0,5 e 2
   }
   function mcDiasDeEstudo(p) {
-    const ini = mcInicio(p), fim = p.fim || MC_DATA_PROVA, revIni = p.revisaoFinal ? mcAdd(fim, -7) : fim, desc = new Set(p.descanso), dias = [];
+    const ini = mcInicio(p), fim = p.fim;
+    if (!fim) return { dias: [], revIni: '', ini, fim: '' };   // sem data da prova não há período
+    const revIni = p.revisaoFinal ? mcAdd(fim, -7) : fim, desc = new Set(p.descanso), dias = [];
     for (let s = ini; s < fim; s = mcAdd(s, 1)) {
       if (s >= revIni || desc.has(s)) continue;
       const h = p.horasSemana[mcS2d(s).getDay()] || 0;
@@ -3869,7 +3961,7 @@
       <div class="mc-leg"><span><i></i>Estudo</span><span><i class="folga"></i>Folga fixa</span><span><i class="desc"></i>Descanso marcado</span>${R.p.revisaoFinal ? '<span><i class="rev"></i>Revisão final</span>' : ''}<span><i class="prova"></i>Prova</span></div></div>`;
   }
   function mcSecPeriodo(R) {
-    return `<div class="mc-datas"><label>Começa em<input type="date" value="${R.ini}" min="${hojeISO()}" data-mcch="inicio"></label><label>Prova em<input type="date" value="${R.fim}" min="${R.ini}" data-mcch="fim"></label></div>
+    return `<div class="mc-datas"><label>Começa em<input type="date" value="${R.ini}" min="${hojeISO()}" data-mcch="inicio"></label><label>Prova em<input type="date" value="${R.fim}" min="${R.ini}" data-mcch="fim"></label><button type="button" class="mc-btn" data-mc="limparprova" data-k="x">Limpar data da prova</button></div>
       <label class="mc-chk"><input type="checkbox" ${R.p.revisaoFinal ? 'checked' : ''} data-mcch="rev"><span>Reservar a última semana para revisão geral<small>${R.p.revisaoFinal ? `De ${mcBRc(R.revIni)} a ${mcBRc(mcAdd(R.fim, -1))}, fora do ciclo.` : 'Desligado: o ciclo vai até a véspera da prova.'}</small></span></label>
       ${mcCalendario(R)}
       <div class="mc-pilulas"><span class="mc-pil"><b>${R.dias.length}</b> dias de estudo</span><span class="mc-pil"><b>${mcH(R.H)} h</b> disponíveis</span><span class="mc-pil"><b>${R.p.descanso.filter(s => s >= R.ini && s < R.fim).length}</b> descansos marcados</span></div>`;
@@ -3923,6 +4015,13 @@
     if (!el || el.classList.contains('hidden')) return;
     const at = document.activeElement, foco = at && at.closest && at.closest('#cron-montar') ? (at.dataset.mc ? `[data-mc="${at.dataset.mc}"][data-k="${at.dataset.k}"]${at.dataset.d ? `[data-d="${at.dataset.d}"]` : ''}${at.dataset.v ? `[data-v="${at.dataset.v}"]` : ''}` : at.dataset.mcch ? `[data-mcch="${at.dataset.mcch}"]` : null) : null;
     const R = mcCalcular();
+    if (!R.fim) {
+      el.innerHTML = `<div class="mc-topo"><div><span class="mc-migalha">Cronograma › Montar ciclo</span><h2 id="mc-titulo" class="text-2xl font-bold" tabindex="-1">Montar ciclo</h2><p class="text-sec text-sm">O ciclo é montado até a data da prova.</p></div><button type="button" class="mc-btn" data-mc="voltar" data-k="v"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar ao Cronograma</button></div>
+        <section class="mc-cartao mc-sec" aria-labelledby="mc-sd"><header><span class="mc-num" aria-hidden="true"><i class="fa-solid fa-calendar-day"></i></span><div><h3 id="mc-sd">Data da prova a definir</h3><p>Escolha a data para o sistema calcular os dias e as horas do ciclo. A data vale também para a contagem do Painel.</p></div></header>
+          <div class="mc-datas"><label>Prova em<input type="date" min="${hojeISO()}" data-mcch="fim"></label></div></section>`;
+      if (foco) { const f = el.querySelector(foco); if (f && !f.disabled) f.focus({ preventScroll: true }); }
+      return;
+    }
     el.innerHTML = `<div class="mc-topo"><div><span class="mc-migalha">Cronograma › Montar ciclo</span><h2 id="mc-titulo" class="text-2xl font-bold" tabindex="-1">Montar ciclo</h2><p class="text-sec text-sm">O sistema sugere pelo peso da prova e pelas suas lacunas; você ajusta o que quiser. Tudo fica guardado como rascunho.</p></div><button type="button" class="mc-btn" data-mc="voltar" data-k="v"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar ao Cronograma</button></div>
       <div class="mc-grade"><div class="mc-col">
         ${mcSec(1, 'Peso da prova', 'Questões, pontos e peso de cada disciplina', mcSecPeso(R))}
@@ -3967,6 +4066,7 @@
       const R2 = R0(), resto = Math.round((R2.H - R2.dist) * 2) / 2;
       if (resto) { const i = R2.horas.indexOf(Math.max(...R2.horas)); p.ajustes[R2.discs[i].id] = Math.max(0, R2.horas[i] + resto); }
     }
+    else if (a === 'limparprova') { definirDataProva(''); return; }
     else if (a === 'desc') { const i = p.descanso.indexOf(k); if (i >= 0) p.descanso.splice(i, 1); else p.descanso.push(k); }
     else if (a === 'lm') p.letrasModo = k === 'fixo' ? 'fixo' : 'auto';
     else if (a === 'lf') p.letrasFixo = Math.max(2, Math.min(6, +k));
@@ -3978,8 +4078,8 @@
   function mcMudanca(ev) {
     const i = ev.target.closest('[data-mcch]'); if (!i) return;
     const a = i.dataset.mcch, p = planoAtual();
-    if (a === 'inicio') { if (i.value) { p.inicio = i.value; if (p.fim <= p.inicio) p.fim = mcAdd(p.inicio, 1); mcUI.mes = mcInicio(p).slice(0, 7); } }
-    else if (a === 'fim') { if (i.value && i.value > mcInicio(p)) p.fim = i.value; }
+    if (a === 'inicio') { if (i.value && (!p.fim || i.value < p.fim)) { p.inicio = i.value; mcUI.mes = mcInicio(p).slice(0, 7); } }
+    else if (a === 'fim') { if (i.value && i.value > mcInicio(p)) { definirDataProva(i.value); return; } }
     else if (a === 'rev') p.revisaoFinal = i.checked;
     else if (a === 'gar') { p.garantir = i.checked; p.ajustes = {}; }
     else if (a === 'outro') { const n = parseInt(i.value, 10); if (n > 0) p.outro = Math.max(15, Math.min(180, n)); }
@@ -5959,6 +6059,9 @@
         if (src) imagens[id] = src;
       }
     }
+    for (const s of fotosMuralAtual()) {   // fotos do mural escolhidas pela Amanda
+      if (s.i) { const src = await idbGet(s.i); if (src) imagens[s.i] = src; }
+    }
     const payload = { app: 'Central_Estudos_Amanda_CBMPE', dataExportacao: new Date().toISOString(), ...estadoAtual(), imagens };
     baixarArquivo(JSON.stringify(payload), `backup_central_estudos_${hojeISO()}${sufixo}.json`);
   }
@@ -6180,8 +6283,6 @@
       atualizarIconeTema();
     }
     atualizarVersiculo();
-    vigiarFotos();
-    atualizarCountdown();
     let bruto = null;
     try {
       bruto = localStorage.getItem(STORAGE_KEY);
