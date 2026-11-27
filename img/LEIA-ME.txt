@@ -6,7 +6,7 @@ usa um fundo escuro liso e um avatar padrão, sem quebrar o layout.
   banner-lateral.jpg    bloco do topo da barra lateral (foto larga/alta). Sugestão: 800 x 900 px, até 150 KB
   fundo-cabecalho.jpg   fundo do cabeçalho do Painel Geral (já incluído: 960 x 580 px)
   perfil.png            imagem redonda do perfil, brasão do CBMPE (já incluída: 256 x 256 px)
-  foto1.jpg a foto4.jpg "Minha Força & Inspiração" (opcional). Sugestão: 800 x 800 px, até 120 KB cada
+  foto1.jpg a foto4.jpg "Minha Força & Inspiração" (já incluídas: até 1000 px no lado maior, sem metadados)
 
 Otimização: JPEG progressivo, qualidade 75 a 80, sem metadados.
 O véu escuro sobre banner-lateral.jpg e fundo-cabecalho.jpg já está no código (nos dois temas)
