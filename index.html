@@ -946,8 +946,9 @@
     .el-chave[aria-checked="true"] .el-trilho { background: var(--btn-iniciar-bg); box-shadow: none; } .el-chave[aria-checked="true"] .el-trilho i { transform: translateX(18px); background: var(--btn-iniciar-fg); }
     .el-corpo { display: grid; gap: 10px; } .el-corpo[hidden] { display: none; }
     .el-lista { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
-    .el-lin { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; align-items: center; border: 1px solid var(--border-color); border-radius: 14px; background: var(--bg-card); padding: 10px 12px; min-width: 0; }
-    .el-lin.abaixo { background: var(--mc-ruim-bg); border-color: var(--mc-ruim-bd); } .el-lin.total { border-width: 2px; }
+    .el-lin, .el-ld { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; align-items: center; border: 1px solid var(--border-color); border-radius: 14px; background: var(--bg-card); padding: 10px 12px; min-width: 0; }
+    .el-lin.abaixo, .el-ld.abaixo { background: var(--mc-ruim-bg); border-color: var(--mc-ruim-bd); } .el-lin.total { border-width: 2px; }
+    .el-dis > :not(summary) { margin-top: 8px; } .el-dis > summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 800; font-size: 13.5px; } .el-dis > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; } .el-dis[open] > summary { margin-bottom: 2px; }
     .el-nome { font-weight: 800; font-size: 14px; margin: 0; overflow-wrap: anywhere; } .el-det { font-size: 12.5px; color: var(--text-secondary); margin: 0; grid-column: 1; overflow-wrap: anywhere; line-height: 1.35; }
     .el-sel { grid-row: 1 / span 2; grid-column: 2; display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 800; padding: 6px 10px; border-radius: 99px; border: 1.5px solid currentColor; white-space: nowrap; }
     .el-sel.ok { color: var(--mc-ok-t); } .el-sel.abaixo { color: var(--mc-ruim-t); } .el-sel.sem { color: var(--text-secondary); }
@@ -1061,7 +1062,7 @@
 
             <section id="el" class="el" aria-label="Alerta de eliminação">
               <div class="el-cab">
-                <div class="ms-tit"><h3>Alerta de eliminação</h3><p class="ms-sub">Avisa quando o desempenho estimado fica abaixo de 30% em algum bloco ou no total da objetiva.</p></div>
+                <div class="ms-tit"><h3>Alerta de eliminação</h3><p class="ms-sub">Avisa quando o desempenho estimado fica abaixo de 30% em algum bloco ou no total da objetiva, ou quando alguma disciplina está zerada ou em risco.</p></div>
                 <button type="button" id="el-chave" class="el-chave" role="switch" aria-checked="false" aria-controls="el-corpo" onclick="alternarAlertaEliminacao()"><span class="el-trilho" aria-hidden="true"><i></i></span><span class="el-chave-t">Desligado</span></button>
               </div>
               <div id="el-corpo" class="el-corpo" hidden></div>
@@ -2791,7 +2792,7 @@
     meusDados.forEach(d => {
       let ac = 0, tot = 0;
       percorrerNos(d.topicos, n => { ac += n.acertos || 0; tot += n.totais || 0; });
-      porDisc[d.id] = { nome: d.nome, pontos: pontosDaDisciplina(d.id), taxa: tot > 0 ? Math.min(1, ac / tot) : null };
+      porDisc[d.id] = { nome: d.nome, pontos: pontosDaDisciplina(d.id), ac, tot, taxa: tot > 0 ? Math.min(1, ac / tot) : null };
     });
     const soma = l => l.reduce((a, b) => a + b, 0);
     const resumir = (nome, ids) => {
@@ -2801,7 +2802,13 @@
       return { nome, pontos, minimo: pontos * MINIMO_ELIMINACAO, pct, comDados: com.length, total: ds.length, semDados: ds.filter(d => d.taxa === null).map(d => d.nome),
         status: pct === null ? 'sem' : (pct * 100 < MINIMO_ELIMINACAO * 100 - 1e-9 ? 'abaixo' : 'ok') };
     };
-    return { blocos: BLOCOS_PROVA.map(b => resumir(b.nome, b.discs)), total: resumir('Total da objetiva', BLOCOS_PROVA.flatMap(b => b.discs)) };
+    // Regra do edital de 2024 (item 9.4): quem zera uma área de conhecimento é eliminado. Aqui cada disciplina conta como uma área
+    // (leitura mais exigente). Zerada = questões feitas sem nenhum acerto; em risco = projeção abaixo de 1 ponto.
+    const disciplinas = BLOCOS_PROVA.flatMap(b => b.discs.map(i => porDisc[i]).filter(Boolean).map(d => {
+      const proj = d.taxa === null ? null : d.taxa * d.pontos;
+      return { nome: d.nome, bloco: b.nome, pontos: d.pontos, ac: d.ac, tot: d.tot, proj, status: d.taxa === null ? 'sem' : d.ac === 0 ? 'zero' : proj < 1 - 1e-9 ? 'risco' : 'ok' };
+    }));
+    return { blocos: BLOCOS_PROVA.map(b => resumir(b.nome, b.discs)), total: resumir('Total da objetiva', BLOCOS_PROVA.flatMap(b => b.discs)), disciplinas };
   }
   function alternarAlertaEliminacao() { preferencias.alertaEliminacao = !preferencias.alertaEliminacao; salvarTudo(); }
   function renderizarAlertaEliminacao() {
@@ -2824,7 +2831,14 @@
         : `Acerto estimado ${nf(x.pct * 100)}% · mínimo ${nf(x.minimo)} de ${nf(x.pontos)} pts (30%) · dados em ${x.comDados} de ${x.total} disciplinas${x.semDados.length ? `. Sem dados: ${esc(x.semDados.join(', '))}` : ''}`;
       return `<li class="el-lin ${x.status}${eTotal ? ' total' : ''}"><p class="el-nome">${esc(x.nome)}</p><span class="el-sel ${x.status}"><i class="fa-solid ${rot[x.status][0]}" aria-hidden="true"></i>${rot[x.status][1]}</span><p class="el-det">${det}</p></li>`;
     };
-    corpo.innerHTML = aviso + `<ul class="el-lista" aria-label="Situação por bloco e total">${R.blocos.map(x => lin(x, false)).join('')}${lin(R.total, true)}</ul>`;
+    const zeradas = R.disciplinas.filter(x => x.status === 'zero'), riscos = R.disciplinas.filter(x => x.status === 'risco');
+    const avisoDisc = zeradas.length || riscos.length
+      ? `<div class="mc-aviso ruim" id="el-aviso-disc" role="status"><i class="fa-solid fa-ban" aria-hidden="true"></i><span><b>Nenhuma disciplina pode zerar.</b>${zeradas.length ? ` Zerada${zeradas.length > 1 ? 's' : ''}: ${zeradas.map(x => esc(x.nome)).join(', ')}.` : ''}${riscos.length ? ` Em risco (projeção abaixo de 1 ponto): ${riscos.map(x => esc(x.nome)).join(', ')}.` : ''}</span></div>` : '';
+    const rotD = { zero: ['fa-ban', 'Zerada'], risco: ['fa-triangle-exclamation', 'Menos de 1 ponto'], ok: ['fa-circle-check', 'Ok'], sem: ['fa-circle-minus', 'Sem dados'] };
+    const clsD = { zero: 'abaixo', risco: 'abaixo', ok: 'ok', sem: 'sem' };
+    const linD = x => `<li class="el-ld ${clsD[x.status]}"><p class="el-nome">${esc(x.nome)}</p><span class="el-sel ${clsD[x.status]}"><i class="fa-solid ${rotD[x.status][0]}" aria-hidden="true"></i>${rotD[x.status][1]}</span><p class="el-det">${x.status === 'sem' ? `${x.pontos} ${x.pontos === 1 ? 'ponto' : 'pontos'} na prova · sem questões registradas` : `${x.ac} acerto${x.ac === 1 ? '' : 's'} em ${x.tot} · projeção ${nf(x.proj)} de ${nf(x.pontos)} pts`}</p></li>`;
+    const detD = `<details class="el-dis" id="el-dis"${zeradas.length || riscos.length ? ' open' : ''}><summary>Por disciplina (${R.disciplinas.length})</summary><p class="el-det">O edital de 2024 eliminava quem zerasse uma área de conhecimento. Cada disciplina é tratada como uma área, a leitura mais exigente.</p><ul class="el-lista" aria-label="Situação por disciplina">${R.disciplinas.map(linD).join('')}</ul></details>`;
+    corpo.innerHTML = aviso + avisoDisc + `<ul class="el-lista" aria-label="Situação por bloco e total">${R.blocos.map(x => lin(x, false)).join('')}${lin(R.total, true)}</ul>` + detD;
   }
   // Primeiro dia com estudo: recalculado a cada atualização, para acompanhar zerar, edição manual e importação
   function primeiroDiaComEstudo() {
