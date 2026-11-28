@@ -77,24 +77,26 @@ Seguindo a sua orientação (só o que o histórico e a prova de 2024 apontam, c
 
 ## 4. Alocação de tempo
 
-As percentagens abaixo saem da combinação de ganho possível × facilidade, respeitando suas prioridades (Direito do Bloco III, Português e Química; só o mínimo em Matemática, Estatística e Física). Eu **conferi na própria plataforma** o que o Montar ciclo gera com os pesos abaixo, com "Garantir uma passada completa" **desligado**, 18 h por semana (3 h de segunda a sábado) e 74 dias de estudo até 20/02 (222 horas):
+As percentagens abaixo saem da combinação de ganho possível × facilidade, respeitando suas prioridades (Direito do Bloco III, Português e Química; só o mínimo em Matemática, Estatística e Física). Eu **conferi na própria plataforma** o que o Montar ciclo gera com o plano aplicado (pesos por disciplina, estrelas e diagnósticos dos tópicos), com "Garantir uma passada completa" **desligado**, **15 h por semana** (2,5 h de segunda a sábado, a faixa de 13 a 18 h que você informou) e 74 dias de estudo até 20/02 (**182 horas**):
 
-| Disciplina | Peso por disciplina | Parte do tempo | Horas (222 h) | Horas por semana (18 h) |
+| Disciplina | Peso por disciplina | Parte do tempo | Horas (182 h) | Horas por semana (15 h) |
 |---|---|---:|---:|---:|
-| Legislação Militar PE | alto | 18,2% | 40 h | 3,3 h |
-| Direito Constitucional | alto | 14,6% | 32 h | 2,6 h |
-| Língua Portuguesa | alto | 9,0% | 20 h | 1,6 h |
-| Química | alto | 9,0% | 20 h | 1,6 h |
-| Direito Penal Militar | alto | 9,0% | 20 h | 1,6 h |
-| Direito Administrativo | médio | 8,6% | 19 h | 1,5 h |
-| Estatística | médio | 6,1% | 14 h | 1,1 h |
-| Matemática | médio | 6,1% | 14 h | 1,1 h |
-| Física | médio | 6,1% | 14 h | 1,1 h |
-| Biologia | médio | 6,1% | 14 h | 1,1 h |
-| Espanhol | baixo | 3,6% | 8 h | 0,6 h |
-| Informática | baixo | 3,6% | 8 h | 0,6 h |
+| Legislação Militar PE | alto | 16,7% | 30 h | 2,5 h |
+| Direito Constitucional | alto | 13,4% | 24 h | 2,0 h |
+| Direito Administrativo | médio | 10,1% | 18 h | 1,5 h |
+| Língua Portuguesa | alto | 8,2% | 15 h | 1,2 h |
+| Física | alto | 8,2% | 15 h | 1,2 h |
+| Química | alto | 8,2% | 15 h | 1,2 h |
+| Direito Penal Militar | alto | 8,2% | 15 h | 1,2 h |
+| Matemática | médio | 7,4% | 14 h | 1,1 h |
+| Estatística | médio | 6,8% | 12 h | 1,0 h |
+| Biologia | médio | 5,5% | 10 h | 0,8 h |
+| Informática | baixo | 3,8% | 7 h | 0,6 h |
+| Espanhol | baixo | 3,3% | 6 h | 0,5 h |
 
-**Por bloco:** Bloco III 50,4%, Bloco II 27,3%, Bloco I 22,3%.
+**Física ficou com peso alto** (e não médio) porque é a de maior chance de zerar (26%) e, com poucos tópicos marcados em 86 folhas, o peso médio a deixava com menos tempo que Matemática e Estatística. Para quem prefere mantê-la mínima, basta mudar para médio no Montar ciclo.
+
+**Por bloco:** Bloco III 48,4%, Bloco II 29,3%, Bloco I 22,1%.
 
 **Duas descobertas sobre a plataforma:**
 
@@ -117,20 +119,20 @@ As percentagens abaixo saem da combinação de ganho possível × facilidade, re
 
 **Já funciona hoje, em ordem:**
 
-1. **Alerta de eliminação** ligado no Painel (blocos, total e disciplina zerada ou em risco).
-2. **Registrar os 3 simulados como questões**: a plataforma calcula a projeção a partir dos acertos e totais por tópico; lançar os 3 simulados (soma de acertos e de questões por disciplina) acende o alerta com os números reais.
+1. **Alerta de eliminação** ligado no Painel (blocos, total, disciplina zerada ou em risco e chance estimada de zerar).
+2. **Simulados** (card novo no Painel): registrar data e acertos por disciplina; gráfico de evolução por bloco; o alerta usa a média dos 3 últimos.
 3. **Montar ciclo**: pesos por disciplina da seção 4, horas por dia, "Garantir passada completa" desligado, revisão final marcada, período até 28/02.
 4. **Edital**: estrela nos tópicos das Camadas 0 e 1 e diagnóstico inicial por nível (N1 = Não estudado; N2 = Revisar mais; N3 = Revisar mais ou Domínio).
 5. **Cronograma e Revisões** seguem o ciclo; **Caderno de Erros** alimenta a F3 e a F4.
 
-**O que a plataforma não faz sozinha e posso construir (com a sua aprovação):**
+**Construído a partir da sua aprovação:**
 
-- **Aplicar o plano com um botão:** backup automático antes, preview do que será alterado, e desfazer. Preenche pesos por disciplina, horas, estrelas e diagnósticos nos tópicos (as Camadas 0 e 1) e, se você quiser, os 3 simulados como acertos. **Isso grava dados na versão da Amanda, por isso preciso do seu aval.**
-- **Simulados como registro próprio** (data e acertos por disciplina), com gráfico de evolução, para o alerta usar o último simulado em vez de somar tudo.
-- **Alerta por probabilidade:** em vez de só "abaixo de 1 ponto", mostrar a chance estimada de zerar cada disciplina e a folga do Bloco II.
+- **Plano estratégico** (botão no Cronograma): faz backup antes, mostra o preview, preenche só o que está vazio e pode ser desfeito. Aplica pesos por disciplina, 15 h por semana, "Garantir passada completa" desligado, estrelas, pesos e diagnósticos dos tópicos (123 tópicos do edital) e registra os 3 simulados.
+- **Registro de simulados** com gráfico de evolução.
+- **Alerta por probabilidade:** chance de zerar cada disciplina, chance de zerar alguma e folga estimada de cada bloco.
 
-## 7. O que preciso de você
+## 7. Pendências
 
-1. **Horas por semana** que ela realmente tem (usei 18 h por semana como referência).
-2. **Aval para construir** o botão "Aplicar plano" e/ou o registro de simulados.
-3. **Metas:** confirmar ou ajustar as metas da seção 2, principalmente Física, Matemática e Estatística (2,5 cada).
+1. **Metas:** confirmar ou ajustar as metas da seção 2, principalmente Física, Matemática e Estatística (2,5 cada).
+2. **Aplicar o plano** na plataforma da Amanda (botão "Plano estratégico", no Cronograma) e **registrar os simulados** a cada 14 dias.
+3. **Datas dos 3 simulados já feitos:** entraram sem data; se souber, edite no card Simulados.

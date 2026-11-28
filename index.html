@@ -926,6 +926,24 @@
     .fi-extra { display: grid; gap: 8px; justify-items: start; } .fi-extra[hidden] { display: none; } .fi-dica { font-size: 12.5px; color: var(--text-secondary); margin: 0; line-height: 1.4; }
     .fi-vazio { display: none; position: absolute; inset: 0; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px; text-align: center; font-size: 12.5px; font-weight: 700; color: var(--text-secondary); }
     .fi-vazio i { font-size: 22px; } .fi-item.sem-foto .fi-vazio { display: flex; } .fi-item.sem-foto .fi-foto img, .fi-item.sem-foto .fi-lupa { display: none; } .fi-item.sem-foto .fi-foto { cursor: default; border-style: dashed; }
+    /* simulados, plano estratégico */
+    @media (min-width: 768px) { .dash-esq > #sm { grid-column: 1 / -1; } }
+    @media (min-width: 1024px) { .dash-esq > #sm { grid-column: auto; margin-top: 16px; } }
+    .sm-form { display: grid; gap: 12px; border: 1px solid var(--border-color); border-radius: 14px; background: var(--bg-card); padding: 12px; } .sm-form[hidden] { display: none; }
+    .sm-grp { border: 0; margin: 0; padding: 0; display: grid; gap: 6px; min-width: 0; } .sm-grp legend { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--text-secondary); padding: 0; margin-bottom: 4px; }
+    .sm-cmp { display: grid; grid-template-columns: minmax(0, 1fr) 72px; gap: 8px; align-items: center; font-size: 13px; } .sm-cmp input { text-align: center; padding: 0 6px; }
+    .sm-cmp small { color: var(--text-secondary); font-size: 11.5px; display: block; }
+    .sm-cab2 { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); } .sm-cab2 label { display: grid; gap: 4px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--text-secondary); }
+    .sm-erro { color: var(--mc-ruim-t); font-size: 13px; font-weight: 700; margin: 0; } .sm-erro:empty { display: none; }
+    .sm-acoes { display: flex; flex-wrap: wrap; gap: 8px; }
+    .sm-lista { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .sm-it { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; align-items: center; border: 1px solid var(--border-color); border-radius: 14px; background: var(--bg-card); padding: 10px 12px; min-width: 0; }
+    .sm-it b { font-size: 14px; } .sm-it .el-det { grid-column: 1; } .sm-it .sm-bt { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: 4px; }
+    .sm-graf { width: 100%; height: auto; display: block; } .sm-leg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--text-secondary); } .sm-leg span { display: inline-flex; align-items: center; gap: 6px; }
+    .pl-sec { border: 1px solid var(--border-color); border-radius: 14px; background: var(--bg-card); padding: 12px; display: grid; gap: 8px; } .pl-sec h4 { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin: 0; }
+    .pl-tab { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 12.5px; } .pl-tab td:first-child { overflow-wrap: anywhere; } .pl-tab th:first-child { width: 40%; } .pl-sec { min-width: 0; } .pl-tab th, .pl-tab td { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--border-color); vertical-align: top; } .pl-tab th { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-secondary); }
+    .pl-tab td.n, .pl-tab th.n { text-align: right; font-variant-numeric: tabular-nums; }
+    .pl-acoes { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
     /* data da prova editável */
     .hr-lk { grid-column: 2; justify-self: start; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; padding: 0 4px; color: #e2e8f0; font-size: 12.5px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; border-radius: 8px; }
     .hr-lk:hover { color: #fff; } .hr-lk:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
@@ -1067,6 +1085,15 @@
               </div>
               <div id="el-corpo" class="el-corpo" hidden></div>
             </section>
+
+            <section id="sm" class="el sm" aria-label="Simulados">
+              <div class="el-cab">
+                <div class="ms-tit"><h3>Simulados</h3><p class="ms-sub" id="sm-sub">Acertos por disciplina em cada simulado de 70 questões.</p></div>
+                <button type="button" class="ms-bt pri" id="sm-novo" onclick="abrirFormSimulado()" aria-expanded="false" aria-controls="sm-form"><i class="fa-solid fa-plus" aria-hidden="true"></i> Novo simulado</button>
+              </div>
+              <form id="sm-form" class="sm-form" hidden onsubmit="salvarSimulado(event)" novalidate></form>
+              <div id="sm-corpo" class="el-corpo"></div>
+            </section>
           </div>
 
           <div class="dash-dir">
@@ -1148,6 +1175,7 @@
           </div>
           <div class="cr-acoes">
             <button type="button" id="cron-btn-montar" onclick="abrirMontarCiclo()" class="mc-btn"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Montar ciclo</button>
+            <button type="button" id="cron-btn-plano" onclick="abrirModalPlano()" class="mc-btn"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Plano estratégico</button>
             <button type="button" id="cron-btn-editar" onclick="alternarEdicaoCron()" class="mc-btn" aria-pressed="false"><i class="fa-solid fa-pen" aria-hidden="true"></i> <span>Editar ciclo</span></button>
             <button type="button" id="cron-btn-pular-b" onclick="pularDia()" class="mc-btn"><i class="fa-solid fa-forward-step" aria-hidden="true"></i> <span id="cron-btn-pular">Pular dia atual</span></button>
             <button type="button" id="cron-btn-novo-b" onclick="adicionarDia()" class="mc-btn pri hidden"><i class="fa-solid fa-plus" aria-hidden="true"></i> <span id="cron-btn-novo">Novo dia</span></button>
@@ -1658,6 +1686,16 @@
   </div>
 
   <!-- ================= MODAL: BACKUP ================= -->
+  <div id="modal-plano" class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center backdrop-blur-sm p-4" role="dialog" aria-modal="true" aria-labelledby="plano-tit-modal">
+    <div class="bg-panel w-full max-w-2xl rounded-2xl border border-theme shadow-2xl overflow-hidden" style="max-height:92vh;display:flex;flex-direction:column">
+      <div class="p-5 border-b border-theme flex justify-between items-center bg-card">
+        <h3 class="font-bold text-base flex items-center gap-2" id="plano-tit-modal"><i class="fa-solid fa-bullseye text-brand" aria-hidden="true"></i> Plano estratégico</h3>
+        <button type="button" onclick="fecharModalPlano()" class="text-sec hover:text-main" aria-label="Fechar"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-5 space-y-4 pl-corpo" id="plano-modal-corpo" style="overflow-y:auto"></div>
+    </div>
+  </div>
+
   <div id="modal-backup" class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center backdrop-blur-sm p-4">
     <div class="bg-panel w-full max-w-md rounded-2xl border border-theme shadow-2xl overflow-hidden">
       <div class="p-5 border-b border-theme flex justify-between items-center bg-card">
@@ -2472,6 +2510,8 @@
   let cadernoErros = [];
   let cronograma = { dias: [], diaAtual: 0, rodada: 1, historico: [] };
   let preferencias = { duracaoPadrao: 50, alertaEliminacao: false };
+  let simulados = [];        // [{ id, rotulo, data, acertos: { idDisciplina: n } }]
+  let planoAplicado = null;  // { versao, em, anterior } (para desfazer o plano estratégico)
   let expandedNodes = new Set();
 
   function normalizarRevisao(r) {
@@ -2501,6 +2541,8 @@
     cadernoErros = p.cadernoErros || [];
     cronograma = p.cronograma || { dias: [], diaAtual: 0, rodada: 1, historico: [] };
     preferencias = Object.assign({ duracaoPadrao: 50, alertaEliminacao: false }, p.preferencias || {});
+    simulados = Array.isArray(p.simulados) ? p.simulados : [];
+    planoAplicado = p.planoAplicado || null;
     versaoDados = Number(p.versaoDados) || 1;
     migracaoEtapa3 = p.migracaoEtapa3 || null;
     if (versaoDados >= VERSAO_DADOS) recalcularTemposDosRegistros();
@@ -2509,7 +2551,8 @@
     return {
       dados: meusDados, revisoes: minhasRevisoes, registrosEstudo, historicoDiario,
       lembretes, planoDia, cadernoErros, cronograma, preferencias,
-      versaoDados, ...(migracaoEtapa3 ? { migracaoEtapa3 } : {})
+      versaoDados, ...(migracaoEtapa3 ? { migracaoEtapa3 } : {}),
+      ...(simulados.length ? { simulados } : {}), ...(planoAplicado ? { planoAplicado } : {})
     };
   }
 
@@ -2695,6 +2738,7 @@
     renderizarLembretes();
     renderizarPlanoDia();
     renderizarAlertaEliminacao();
+    renderizarSimulados();
     renderizarMuralFotos();
     renderizarVitrineErros();
     if (visivel('erros-disc')) renderizarMuralErros();
@@ -2787,12 +2831,19 @@
     const q = ((cronograma.plano || {}).questoes || {})[id] || {};
     return (Number.isFinite(q.q) ? q.q : (QUESTOES_PADRAO[id] ?? 0)) * (Number.isFinite(q.p) ? q.p : 1);
   }
+  function questoesDaProva(id) {
+    const q = ((cronograma.plano || {}).questoes || {})[id] || {};
+    return Number.isFinite(q.q) ? q.q : (QUESTOES_PADRAO[id] ?? 0);
+  }
+  // simulados em ordem (data, depois ordem de cadastro); o alerta usa a média dos 3 últimos
+  function simuladosOrdenados() { return [...simulados].sort((a, b) => (a.data || '0000').localeCompare(b.data || '0000') || (a.id > b.id ? 1 : -1)); }
   function calcularEliminacao() {
-    const porDisc = {};
+    const porDisc = {}, usados = simuladosOrdenados().slice(-3);
     meusDados.forEach(d => {
       let ac = 0, tot = 0;
-      percorrerNos(d.topicos, n => { ac += n.acertos || 0; tot += n.totais || 0; });
-      porDisc[d.id] = { nome: d.nome, pontos: pontosDaDisciplina(d.id), ac, tot, taxa: tot > 0 ? Math.min(1, ac / tot) : null };
+      if (usados.length) usados.forEach(s => { const a = s.acertos && s.acertos[d.id]; if (Number.isFinite(a)) { ac += a; tot += questoesDaProva(d.id); } });
+      else percorrerNos(d.topicos, n => { ac += n.acertos || 0; tot += n.totais || 0; });
+      porDisc[d.id] = { nome: d.nome, pontos: pontosDaDisciplina(d.id), q: questoesDaProva(d.id), ac, tot, taxa: tot > 0 ? Math.min(1, ac / tot) : null };
     });
     const soma = l => l.reduce((a, b) => a + b, 0);
     const resumir = (nome, ids) => {
@@ -2802,13 +2853,17 @@
       return { nome, pontos, minimo: pontos * MINIMO_ELIMINACAO, pct, comDados: com.length, total: ds.length, semDados: ds.filter(d => d.taxa === null).map(d => d.nome),
         status: pct === null ? 'sem' : (pct * 100 < MINIMO_ELIMINACAO * 100 - 1e-9 ? 'abaixo' : 'ok') };
     };
-    // Regra do edital de 2024 (item 9.4): quem zera uma área de conhecimento é eliminado. Aqui cada disciplina conta como uma área
-    // (leitura mais exigente). Zerada = questões feitas sem nenhum acerto; em risco = projeção abaixo de 1 ponto.
+    // Regra do edital de 2024 (item 9.4): quem zera uma área de conhecimento é eliminado. Cada disciplina conta como uma área
+    // (leitura mais exigente). Zerada = questões feitas sem nenhum acerto. Em risco = projeção abaixo de 1 ponto ou chance de zerar de 10% ou mais.
+    // Chance de zerar = (1 - p)^questões, com p = (acertos + 1) / (questões feitas + 2) (modelo binomial, acerto suavizado).
     const disciplinas = BLOCOS_PROVA.flatMap(b => b.discs.map(i => porDisc[i]).filter(Boolean).map(d => {
       const proj = d.taxa === null ? null : d.taxa * d.pontos;
-      return { nome: d.nome, bloco: b.nome, pontos: d.pontos, ac: d.ac, tot: d.tot, proj, status: d.taxa === null ? 'sem' : d.ac === 0 ? 'zero' : proj < 1 - 1e-9 ? 'risco' : 'ok' };
+      const pz = d.taxa === null ? null : Math.pow(1 - (d.ac + 1) / (d.tot + 2), d.q);
+      return { nome: d.nome, bloco: b.nome, pontos: d.pontos, ac: d.ac, tot: d.tot, proj, pz, status: d.taxa === null ? 'sem' : d.ac === 0 ? 'zero' : (proj < 1 - 1e-9 || pz >= 0.10) ? 'risco' : 'ok' };
     }));
-    return { blocos: BLOCOS_PROVA.map(b => resumir(b.nome, b.discs)), total: resumir('Total da objetiva', BLOCOS_PROVA.flatMap(b => b.discs)), disciplinas };
+    const comPz = disciplinas.filter(x => x.pz !== null), chanceAlguma = comPz.length ? 1 - comPz.reduce((a, x) => a * (1 - x.pz), 1) : null;
+    return { blocos: BLOCOS_PROVA.map(b => resumir(b.nome, b.discs)), total: resumir('Total da objetiva', BLOCOS_PROVA.flatMap(b => b.discs)), disciplinas, chanceAlguma,
+      fonte: usados.length ? { tipo: 'simulados', n: usados.length } : { tipo: 'topicos' } };
   }
   function alternarAlertaEliminacao() { preferencias.alertaEliminacao = !preferencias.alertaEliminacao; salvarTudo(); }
   function renderizarAlertaEliminacao() {
@@ -2828,17 +2883,195 @@
     const rot = { abaixo: ['fa-triangle-exclamation', 'Abaixo de 30%'], ok: ['fa-circle-check', 'Acima de 30%'], sem: ['fa-circle-minus', 'Sem dados'] };
     const lin = (x, eTotal) => {
       const det = x.status === 'sem' ? `Mínimo ${nf(x.minimo)} de ${nf(x.pontos)} pts. Registre questões das disciplinas para estimar.`
-        : `Acerto estimado ${nf(x.pct * 100)}% · mínimo ${nf(x.minimo)} de ${nf(x.pontos)} pts (30%) · dados em ${x.comDados} de ${x.total} disciplinas${x.semDados.length ? `. Sem dados: ${esc(x.semDados.join(', '))}` : ''}`;
+        : `Acerto estimado ${nf(x.pct * 100)}% · mínimo ${nf(x.minimo)} de ${nf(x.pontos)} pts (30%) · folga estimada ${nf(x.pct * x.pontos - x.minimo)} pts · dados em ${x.comDados} de ${x.total} disciplinas${x.semDados.length ? `. Sem dados: ${esc(x.semDados.join(', '))}` : ''}`;
       return `<li class="el-lin ${x.status}${eTotal ? ' total' : ''}"><p class="el-nome">${esc(x.nome)}</p><span class="el-sel ${x.status}"><i class="fa-solid ${rot[x.status][0]}" aria-hidden="true"></i>${rot[x.status][1]}</span><p class="el-det">${det}</p></li>`;
     };
     const zeradas = R.disciplinas.filter(x => x.status === 'zero'), riscos = R.disciplinas.filter(x => x.status === 'risco');
     const avisoDisc = zeradas.length || riscos.length
-      ? `<div class="mc-aviso ruim" id="el-aviso-disc" role="status"><i class="fa-solid fa-ban" aria-hidden="true"></i><span><b>Nenhuma disciplina pode zerar.</b>${zeradas.length ? ` Zerada${zeradas.length > 1 ? 's' : ''}: ${zeradas.map(x => esc(x.nome)).join(', ')}.` : ''}${riscos.length ? ` Em risco (projeção abaixo de 1 ponto): ${riscos.map(x => esc(x.nome)).join(', ')}.` : ''}</span></div>` : '';
-    const rotD = { zero: ['fa-ban', 'Zerada'], risco: ['fa-triangle-exclamation', 'Menos de 1 ponto'], ok: ['fa-circle-check', 'Ok'], sem: ['fa-circle-minus', 'Sem dados'] };
+      ? `<div class="mc-aviso ruim" id="el-aviso-disc" role="status"><i class="fa-solid fa-ban" aria-hidden="true"></i><span><b>Nenhuma disciplina pode zerar.</b>${zeradas.length ? ` Zerada${zeradas.length > 1 ? 's' : ''}: ${zeradas.map(x => esc(x.nome)).join(', ')}.` : ''}${riscos.length ? ` Em risco de zerar (projeção abaixo de 1 ponto ou chance de 10% ou mais): ${riscos.map(x => esc(x.nome)).join(', ')}.` : ''}</span></div>` : '';
+    const rotD = { zero: ['fa-ban', 'Zerada'], risco: ['fa-triangle-exclamation', 'Risco de zerar'], ok: ['fa-circle-check', 'Ok'], sem: ['fa-circle-minus', 'Sem dados'] };
     const clsD = { zero: 'abaixo', risco: 'abaixo', ok: 'ok', sem: 'sem' };
-    const linD = x => `<li class="el-ld ${clsD[x.status]}"><p class="el-nome">${esc(x.nome)}</p><span class="el-sel ${clsD[x.status]}"><i class="fa-solid ${rotD[x.status][0]}" aria-hidden="true"></i>${rotD[x.status][1]}</span><p class="el-det">${x.status === 'sem' ? `${x.pontos} ${x.pontos === 1 ? 'ponto' : 'pontos'} na prova · sem questões registradas` : `${x.ac} acerto${x.ac === 1 ? '' : 's'} em ${x.tot} · projeção ${nf(x.proj)} de ${nf(x.pontos)} pts`}</p></li>`;
+    const linD = x => `<li class="el-ld ${clsD[x.status]}"><p class="el-nome">${esc(x.nome)}</p><span class="el-sel ${clsD[x.status]}"><i class="fa-solid ${rotD[x.status][0]}" aria-hidden="true"></i>${rotD[x.status][1]}</span><p class="el-det">${x.status === 'sem' ? `${x.pontos} ${x.pontos === 1 ? 'ponto' : 'pontos'} na prova · sem questões registradas` : `${x.ac} acerto${x.ac === 1 ? '' : 's'} em ${x.tot} · projeção ${nf(x.proj)} de ${nf(x.pontos)} pts · chance de zerar ${nf(x.pz * 100, x.pz < 0.1 ? 1 : 0)}%`}</p></li>`;
     const detD = `<details class="el-dis" id="el-dis"${zeradas.length || riscos.length ? ' open' : ''}><summary>Por disciplina (${R.disciplinas.length})</summary><p class="el-det">O edital de 2024 eliminava quem zerasse uma área de conhecimento. Cada disciplina é tratada como uma área, a leitura mais exigente.</p><ul class="el-lista" aria-label="Situação por disciplina">${R.disciplinas.map(linD).join('')}</ul></details>`;
-    corpo.innerHTML = aviso + avisoDisc + `<ul class="el-lista" aria-label="Situação por bloco e total">${R.blocos.map(x => lin(x, false)).join('')}${lin(R.total, true)}</ul>` + detD;
+    const chance = R.chanceAlguma === null ? '' : `<div class="mc-aviso ${R.chanceAlguma >= 0.2 ? 'ruim' : R.chanceAlguma >= 0.05 ? '' : 'ok'}" id="el-chance" role="status"><i class="fa-solid fa-dice" aria-hidden="true"></i><span><b>Chance estimada de zerar pelo menos uma disciplina: ${nf(R.chanceAlguma * 100, R.chanceAlguma < 0.1 ? 1 : 0)}%.</b> Calculada pelo acerto atual de cada disciplina (modelo binomial, acerto suavizado).</span></div>`;
+    const fonte = `<p class="el-det" id="el-fonte">${R.fonte.tipo === 'simulados' ? `Baseado ${R.fonte.n === 1 ? 'no último simulado registrado' : `nos ${R.fonte.n} últimos simulados registrados`}.` : 'Baseado nas questões registradas por tópico (Registrar Estudo). Registrar simulados no card abaixo dá uma projeção mais fiel.'}</p>`;
+    corpo.innerHTML = aviso + avisoDisc + chance + `<ul class="el-lista" aria-label="Situação por bloco e total">${R.blocos.map(x => lin(x, false)).join('')}${lin(R.total, true)}</ul>` + detD + fonte;
+  }
+  // =====================================================================
+  // Simulados: registro por disciplina (data e acertos), evolução e uso no alerta de eliminação
+  // =====================================================================
+  let simEditando = null;
+  function resumoSimulado(s) {
+    const blocos = BLOCOS_PROVA.map(b => { const q = b.discs.reduce((a, i) => a + questoesDaProva(i), 0), ac = b.discs.reduce((a, i) => a + (Number(s.acertos[i]) || 0), 0); return { nome: b.nome, q, ac }; });
+    return { blocos, total: blocos.reduce((a, b) => a + b.ac, 0), q: blocos.reduce((a, b) => a + b.q, 0) };
+  }
+  function abrirFormSimulado(id) {
+    const f = document.getElementById('sm-form'), btn = document.getElementById('sm-novo');
+    if (!f.hidden && id === undefined) return fecharFormSimulado();
+    simEditando = id !== undefined ? simulados.find(s => s.id === id) : null;
+    const s = simEditando, n = simulados.length + 1;
+    const nome = i => (meusDados.find(d => d.id === i) || {}).nome || i;
+    f.innerHTML = `<div class="sm-cab2"><label>Nome<input type="text" id="sm-rot" class="ms-campo" maxlength="40" value="${esc(s ? s.rotulo : 'Simulado ' + n)}"></label><label>Data (opcional)<input type="date" id="sm-data" class="ms-campo" value="${s && s.data ? s.data : hojeISO()}"></label></div>`
+      + BLOCOS_PROVA.map(b => `<fieldset class="sm-grp"><legend>${esc(b.nome)}</legend>${b.discs.map(i => { const q = questoesDaProva(i); return `<label class="sm-cmp"><span>${esc(nome(i))}<small>de ${q} ${q === 1 ? 'questão' : 'questões'}</small></span><input type="number" inputmode="numeric" min="0" max="${q}" step="1" data-sm="${i}" class="ms-campo" value="${s && Number.isFinite(s.acertos[i]) ? s.acertos[i] : ''}" aria-label="Acertos em ${esc(nome(i))}, de 0 a ${q}"></label>`; }).join('')}</fieldset>`).join('')
+      + `<p class="sm-erro" id="sm-erro" role="alert"></p><div class="sm-acoes"><button type="submit" class="ms-bt pri">${s ? 'Salvar alterações' : 'Salvar simulado'}</button><button type="button" class="ms-bt" onclick="fecharFormSimulado()">Cancelar</button></div>`;
+    f.hidden = false; btn.setAttribute('aria-expanded', 'true');
+    const p = f.querySelector('[data-sm]'); if (p) p.focus();
+    f.scrollIntoView({ block: 'nearest' });
+  }
+  function fecharFormSimulado() { document.getElementById('sm-form').hidden = true; document.getElementById('sm-novo').setAttribute('aria-expanded', 'false'); simEditando = null; document.getElementById('sm-novo').focus({ preventScroll: true }); }
+  function salvarSimulado(ev) {
+    ev.preventDefault();
+    const erro = document.getElementById('sm-erro'), acertos = {}, ruins = [];
+    document.querySelectorAll('#sm-form [data-sm]').forEach(i => {
+      const q = questoesDaProva(i.dataset.sm), v = i.value.trim();
+      if (!/^\d+$/.test(v) || Number(v) > q) ruins.push((meusDados.find(d => d.id === i.dataset.sm) || {}).nome + ' (0 a ' + q + ')'); else acertos[i.dataset.sm] = Number(v);
+    });
+    if (ruins.length) { erro.textContent = 'Preencha com números inteiros: ' + ruins.join(', ') + '.'; const primeiro = [...document.querySelectorAll('#sm-form [data-sm]')].find(i => { const v = i.value.trim(); return !/^\d+$/.test(v) || Number(v) > questoesDaProva(i.dataset.sm); }); if (primeiro) primeiro.focus(); return; }
+    const rotulo = (document.getElementById('sm-rot').value.trim() || 'Simulado ' + (simulados.length + 1)).slice(0, 40), data = document.getElementById('sm-data').value || null;
+    if (simEditando) { simEditando.rotulo = rotulo; simEditando.data = data; simEditando.acertos = acertos; }
+    else simulados.push({ id: novoId(), rotulo, data, acertos });
+    simEditando = null; document.getElementById('sm-form').hidden = true; document.getElementById('sm-novo').setAttribute('aria-expanded', 'false');
+    salvarTudo();
+  }
+  function excluirSimulado(id) {
+    const s = simulados.find(x => x.id === id); if (!s) return;
+    if (!confirm(`Excluir "${s.rotulo}"? O alerta de eliminação passa a usar os simulados restantes.`)) return;
+    simulados = simulados.filter(x => x.id !== id); salvarTudo();
+  }
+  function graficoSimulados(lista) {
+    const W = 320, H = 150, m = { l: 34, r: 10, t: 10, b: 24 }, pw = W - m.l - m.r, ph = H - m.t - m.b;
+    const x = i => m.l + (lista.length === 1 ? pw / 2 : i * pw / (lista.length - 1)), y = p => m.t + ph * (1 - p / 100);
+    const series = BLOCOS_PROVA.map((b, k) => ({ nome: b.nome, k, cor: ['var(--estudo)', 'var(--edt-agora)', 'var(--concluido)'][k], pts: lista.map(s => { const r = resumoSimulado(s).blocos[k]; return r.q ? r.ac / r.q * 100 : 0; }) }));
+    const marca = (k, cx, cy, cor) => k === 0 ? `<circle cx="${cx}" cy="${cy}" r="4" fill="${cor}"/>` : k === 1 ? `<rect x="${cx - 4}" y="${cy - 4}" width="8" height="8" fill="${cor}"/>` : `<path d="M${cx} ${cy - 5}L${cx + 5} ${cy + 4}L${cx - 5} ${cy + 4}Z" fill="${cor}"/>`;
+    const grade = [0, 30, 50, 100].map(p => `<line x1="${m.l}" x2="${W - m.r}" y1="${y(p)}" y2="${y(p)}" stroke="var(--border-color)" stroke-width="1" ${p === 30 ? 'stroke-dasharray="4 3" style="stroke:var(--mc-ruim-bd)"' : ''}/><text x="${m.l - 5}" y="${y(p) + 4}" text-anchor="end" font-size="10" fill="var(--text-secondary)">${p}%</text>`).join('');
+    const rotX = lista.map((s, i) => `<text x="${x(i)}" y="${H - 6}" text-anchor="middle" font-size="10" fill="var(--text-secondary)">${i + 1}</text>`).join('');
+    const linhas = series.map(s => `${s.pts.length > 1 ? `<polyline fill="none" stroke="${s.cor}" stroke-width="2" points="${s.pts.map((p, i) => `${x(i)},${y(p)}`).join(' ')}"/>` : ''}${s.pts.map((p, i) => marca(s.k, x(i), y(p), s.cor)).join('')}`).join('');
+    const resumoAria = lista.map((s, i) => { const r = resumoSimulado(s); return `simulado ${i + 1}: ${r.blocos.map(b => `${b.nome} ${Math.round(b.ac / b.q * 100)}%`).join(', ')}`; }).join('; ');
+    return `<svg class="sm-graf" viewBox="0 0 ${W} ${H}" role="img" aria-label="Evolução do percentual de acertos por bloco. Linha tracejada: mínimo de 30%. ${esc(resumoAria)}">${grade}${linhas}${rotX}</svg>`
+      + `<div class="sm-leg" aria-hidden="true"><span><svg width="12" height="12"><circle cx="6" cy="6" r="4" style="fill:var(--estudo)"/></svg>Bloco I</span><span><svg width="12" height="12"><rect x="2" y="2" width="8" height="8" style="fill:var(--edt-agora)"/></svg>Bloco II</span><span><svg width="12" height="12"><path d="M6 1L11 10L1 10Z" style="fill:var(--concluido)"/></svg>Bloco III</span><span><svg width="18" height="6"><line x1="0" x2="18" y1="3" y2="3" stroke-width="1.5" stroke-dasharray="4 3" style="stroke:var(--mc-ruim-bd)"/></svg>mínimo 30%</span><span>Eixo horizontal: número do simulado</span></div>`;
+  }
+  function renderizarSimulados() {
+    const corpo = document.getElementById('sm-corpo'); if (!corpo) return;
+    const lista = simuladosOrdenados();
+    document.getElementById('sm-sub').textContent = lista.length ? `${lista.length} ${lista.length === 1 ? 'simulado registrado' : 'simulados registrados'}. O alerta de eliminação usa a média dos 3 últimos.` : 'Acertos por disciplina em cada simulado de 70 questões. O alerta de eliminação passa a usar os simulados.';
+    if (!lista.length) { corpo.innerHTML = '<p class="ms-vazio-t">Nenhum simulado registrado ainda.</p>'; return; }
+    const nf = v => v.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+    corpo.innerHTML = graficoSimulados(lista) + `<ul class="sm-lista" aria-label="Simulados registrados">${lista.map((s, i) => { const r = resumoSimulado(s);
+      return `<li class="sm-it"><b>${i + 1}. ${esc(s.rotulo)}${s.data ? ' · ' + formatarDataBR(s.data) : ''}</b><div class="sm-bt"><button type="button" class="ms-bt ic" onclick="abrirFormSimulado(${typeof s.id === 'number' ? s.id : `'${esc(s.id)}'`})" aria-label="Editar ${esc(s.rotulo)}" title="Editar"><i class="fa-solid fa-pen" aria-hidden="true"></i></button><button type="button" class="ms-bt ic perigo" onclick="excluirSimulado(${typeof s.id === 'number' ? s.id : `'${esc(s.id)}'`})" aria-label="Excluir ${esc(s.rotulo)}" title="Excluir"><i class="fa-solid fa-trash" aria-hidden="true"></i></button></div><p class="el-det">${r.total} de ${r.q} (${nf(r.total / r.q * 100)}%) · ${r.blocos.map(b => `${b.nome.replace('Bloco ', '')}: ${b.ac}/${b.q}`).join(' · ')}</p></li>`; }).join('')}</ul>`;
+  }
+  // =====================================================================
+  // Plano estratégico (Fase 4): pesos por disciplina, horas, estrelas, pesos e diagnósticos dos tópicos, simulados já feitos.
+  // Só preenche o que estiver vazio nos tópicos. Faz backup antes e pode ser desfeito.
+  // Camadas: P = piso (peso alto), A = ataque imediato e N = novidade do edital (peso médio). Chaves = número do tópico no edital.
+  // =====================================================================
+  const PLANO_V1 = {
+    versao: 1,
+    horasSemana: [0, 2.5, 2.5, 2.5, 2.5, 2.5, 2.5],
+    pesoDisc: { legislacao_pe: 'alto', constitucional: 'alto', penal_militar: 'alto', quimica: 'alto', portugues: 'alto', administrativo: 'medio', biologia: 'medio', matematica: 'medio', estatistica: 'medio', fisica: 'alto', espanhol: 'baixo', informatica: 'baixo' },
+    // N1 = não estudado; N2 e N3 = revisar mais (só nos tópicos marcados pelo plano)
+    nivel: { legislacao_pe: 'N1', penal_militar: 'N1', portugues: 'N2', matematica: 'N2', estatistica: 'N2', fisica: 'N2', quimica: 'N2', espanhol: 'N3', informatica: 'N3', biologia: 'N3', constitucional: 'N3', administrativo: 'N3' },
+    itens: {
+      portugues: { '1': 'P', '4': 'P', '7': 'P', '9': 'P', '12': 'P', '11': 'A' },
+      espanhol: { '1': 'P', '5': 'P', '6': 'A' },
+      informatica: { '3': 'P', '2': 'P', '6': 'P', '7': 'A' },
+      estatistica: { '3': 'P', '4': 'P', '5': 'A', '6': 'A' },
+      matematica: { '1': 'P', '3': 'P', '4': 'A', '2': 'A' },
+      fisica: { '7.1': 'P', '7.3': 'P', '7.4': 'P', '7.6': 'P', '7.11': 'P', '6.6': 'P', '6.7': 'P', '6.8': 'P', '6.9': 'P', '6.10': 'P', '3.1': 'P', '3.2': 'P', '3.3': 'P', '5.10': 'P', '5.13': 'P', '4.3': 'P', '4.4': 'P', '6.2': 'A', '6.3': 'A', '6.11': 'A', '2.15': 'A', '5.19': 'A', '5.20': 'A', '5.21': 'A' },
+      quimica: { '1.6': 'P', '1.8.5': 'P', '1.8.7': 'P', '1.8.8': 'P', '2.6.1': 'P', '2.6.4': 'P', '2.6.5': 'P', '2.6.6': 'P', '2.6.8': 'P', '2.5.2': 'P', '2.5.3': 'P', '2.5.5': 'P', '2.5.6': 'P', '2.5.7': 'P', '2.5.8': 'P', '2.1.5': 'P', '3.5': 'A', '2.2.1': 'A', '2.2.2': 'A', '2.2.3': 'A', '2.2.4': 'A', '5': 'N', '6.1': 'N', '6.3': 'N', '6.5': 'N', '7': 'N' },
+      biologia: { '2.4': 'P', '3.1': 'P', '3.4': 'P', '3.5': 'P', '3.7': 'P', '1.14': 'P', '1.11': 'A', '1.10': 'A', '1.3': 'A', '1.6': 'A', '1.4': 'A', '1.12': 'N', '3.15': 'N', '4.5': 'N', '4.6': 'N', '4.9': 'N' },
+      constitucional: { '6': 'P', '7': 'P', '8': 'P', '10': 'P', '14': 'P', '3': 'A', '12': 'A', '16': 'A' },
+      administrativo: { '5': 'P', '3': 'P', '8': 'P', '4': 'P', '6': 'A' },
+      legislacao_pe: { '1.1': 'P', '1.2': 'P', '1.4': 'P', '3.1': 'P', '3.2': 'P', '3.3': 'P', '3.4': 'P', '3.5': 'P', '1.3': 'N', '1.5': 'N', '1.6': 'N', '2': 'N', '4.1': 'N', '4.2': 'N', '4.3': 'N', '4.4': 'N', '5': 'N' },
+      penal_militar: { '2': 'P', '1': 'P', '8': 'P', '5': 'A', '4': 'A', '10': 'A' }
+    },
+    simulados: [
+      { rotulo: 'Simulado 1', acertos: { portugues: 2, espanhol: 3, informatica: 4, estatistica: 1, matematica: 1, fisica: 1, quimica: 2, biologia: 4, constitucional: 5, administrativo: 6, legislacao_pe: 4, penal_militar: 3 } },
+      { rotulo: 'Simulado 2', acertos: { portugues: 3, espanhol: 3, informatica: 3, estatistica: 2, matematica: 2, fisica: 1, quimica: 1, biologia: 3, constitucional: 4, administrativo: 4, legislacao_pe: 5, penal_militar: 2 } },
+      { rotulo: 'Simulado 3', acertos: { portugues: 2, espanhol: 5, informatica: 5, estatistica: 2, matematica: 1, fisica: 1, quimica: 2, biologia: 1, constitucional: 5, administrativo: 3, legislacao_pe: 5, penal_militar: 2 } }
+    ]
+  };
+  function folhasDaDisciplina(disc) { const l = []; percorrerNos(disc.topicos, n => { if (!(n.children && n.children.length)) l.push(n); }); return l; }
+  function planoPreview() {
+    return meusDados.map(d => {
+      const itens = PLANO_V1.itens[d.id] || {}, porNum = {}; folhasDaDisciplina(d).forEach(n => { porNum[numeroEdital(n.nome)] = n; });
+      const r = { id: d.id, nome: d.nome, itens: 0, estrelas: 0, pesos: 0, diags: 0, jaMarcados: 0, faltam: [], alvos: [] };
+      Object.entries(itens).forEach(([num, cam]) => {
+        const n = porNum[num]; if (!n) { r.faltam.push(num); return; }
+        r.itens++; if (!n.aocp) r.estrelas++; else r.jaMarcados++;
+        if (!n.peso) r.pesos++; if (!n.diagnostico) r.diags++;
+        r.alvos.push({ n, cam });
+      });
+      return r;
+    });
+  }
+  function abrirModalPlano() {
+    document.getElementById('modal-plano').classList.remove('hidden');
+    renderizarModalPlano();
+    const b = document.querySelector('#plano-modal-corpo button'); if (b) b.focus();
+  }
+  function fecharModalPlano() { document.getElementById('modal-plano').classList.add('hidden'); const b = document.getElementById('cron-btn-plano'); if (b) b.focus({ preventScroll: true }); }
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && !document.getElementById('modal-plano').classList.contains('hidden')) fecharModalPlano(); });
+  const PD_ROT = { alto: 'Alto', medio: 'Médio', baixo: 'Baixo' };
+  function renderizarModalPlano(msg) {
+    const el = document.getElementById('plano-modal-corpo');
+    if (planoAplicado) {
+      const n = planoAplicado.anterior.nos.length, quando = new Date(planoAplicado.em).toLocaleString('pt-BR');
+      el.innerHTML = `${msg ? `<div class="mc-aviso ok" role="status"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>${esc(msg)}</span></div>` : ''}
+        <div class="pl-sec"><h4>Plano aplicado em ${esc(quando)}</h4><p class="text-sm text-sec">Foram preenchidos ${n} campos de tópicos (estrela, peso e diagnóstico), os pesos por disciplina, as horas por semana e a regra "Garantir passada completa" no Montar ciclo${planoAplicado.anterior.simIds.length ? `, e ${planoAplicado.anterior.simIds.length} simulados` : ''}.</p>
+        <p class="text-sm text-sec"><b>Desfazer</b> devolve esses campos ao que eram antes. Alterações que você fez depois nesses mesmos campos serão perdidas.</p></div>
+        <div class="pl-acoes"><button type="button" class="ms-bt" onclick="fecharModalPlano()">Fechar</button><button type="button" class="ms-bt perigo" onclick="desfazerPlano()"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Desfazer o plano</button></div>`;
+      return;
+    }
+    const pv = planoPreview(), totalEst = pv.reduce((a, r) => a + r.estrelas, 0), totalFaltam = pv.reduce((a, r) => a + r.faltam.length, 0);
+    const p = cronograma.plano || {}, hs = Array.isArray(p.horasSemana) ? p.horasSemana : [0, 3, 3, 3, 3, 3, 3], somaH = a => a.reduce((x, y) => x + y, 0);
+    el.innerHTML = `<p class="text-sm text-sec">Aplica a estratégia das Fases 1 a 4 na plataforma: o que atacar primeiro, quanto tempo dar a cada disciplina e como começar. <b>Só preenche o que estiver vazio nos tópicos</b>; nada do que você já marcou é sobrescrito. Antes de aplicar, é baixada uma cópia de segurança, e dá para desfazer depois.</p>
+      <div class="pl-sec"><h4>Montar ciclo</h4>
+        <p class="text-sm">Peso por disciplina: ${Object.entries(PLANO_V1.pesoDisc).map(([id, v]) => { const d = meusDados.find(x => x.id === id); return `<span class="whitespace-nowrap">${esc(d ? (MC_CURTO[id] || d.nome) : id)} <b>${PD_ROT[v]}</b></span>`; }).join(' · ')}.</p>
+        <p class="text-sm">Horas por semana: <b>${somaH(hs).toLocaleString('pt-BR')} h</b> → <b>${somaH(PLANO_V1.horasSemana).toLocaleString('pt-BR')} h</b> (2,5 h de segunda a sábado). "Garantir uma passada completa": <b>${p.garantir === false ? 'desligado' : 'ligado'}</b> → <b>desligado</b> (ligado, o ciclo ignora os pesos). Revisão da última semana: <b>ligada</b>.</p></div>
+      <div class="pl-sec"><h4>Edital: tópicos marcados</h4>
+        <table class="pl-tab"><thead><tr><th>Disciplina</th><th class="n">Estrelas</th><th class="n">Pesos</th><th class="n" title="Diagnósticos">Diag.</th><th class="n" title="Tópicos que já tinham estrela">Já tinham</th></tr></thead><tbody>${pv.map(r => `<tr><td>${esc(r.nome)}</td><td class="n">${r.estrelas}</td><td class="n">${r.pesos}</td><td class="n">${r.diags}</td><td class="n">${r.jaMarcados}</td></tr>`).join('')}</tbody></table>
+        <p class="text-[12px] text-sec">Estrela e peso alto nos tópicos do Piso; estrela e peso médio nos de ataque imediato e nas novidades do edital. Diagnóstico inicial: Não estudado (Penal Militar e Legislação) ou Revisar mais (as demais), só nos tópicos marcados.${totalFaltam ? ` <b>${totalFaltam} itens do plano não foram achados no edital.</b>` : ''}</p></div>
+      ${simulados.length ? '' : `<label class="mc-chk"><input type="checkbox" id="plano-sim" checked><span>Registrar os 3 simulados já feitos<small>Entram em "Simulados" no Painel, e o alerta de eliminação passa a usar esses números.</small></span></label>`}
+      <div class="pl-acoes"><button type="button" class="ms-bt" onclick="fecharModalPlano()">Cancelar</button><button type="button" class="ms-bt pri" id="plano-aplicar" onclick="aplicarPlano()"><i class="fa-solid fa-download" aria-hidden="true"></i> Fazer backup e aplicar</button></div>
+      <p class="sm-erro" id="plano-erro" role="alert"></p>`;
+  }
+  async function aplicarPlano() {
+    if (planoAplicado) return;
+    const botao = document.getElementById('plano-aplicar'), erro = document.getElementById('plano-erro');
+    if (botao) botao.disabled = true;
+    try { await exportarBackup('_antes_do_plano'); }
+    catch (e) { if (erro) erro.textContent = 'Não foi possível baixar a cópia de segurança. Nada foi alterado.'; if (botao) botao.disabled = false; return; }
+    const incluirSim = !simulados.length && !!(document.getElementById('plano-sim') || {}).checked;
+    const ant = { nos: [], plano: null, simIds: [] }, p = planoAtual();
+    ant.plano = { horasSemana: [...p.horasSemana], garantir: p.garantir, revisaoFinal: p.revisaoFinal, pd: {} };
+    meusDados.forEach(d => { const q = p.questoes[d.id]; ant.plano.pd[d.id] = q && PESOS[q.pd] ? q.pd : null; });
+    // ciclo
+    const ds = mcDisciplinas(p);
+    Object.entries(PLANO_V1.pesoDisc).forEach(([id, v]) => { const di = ds.find(x => x.id === id); if (di) p.questoes[id] = { q: di.q, p: di.p, pd: v }; });
+    p.horasSemana = [...PLANO_V1.horasSemana]; p.garantir = false; p.revisaoFinal = true;
+    // tópicos (só campos vazios)
+    planoPreview().forEach(r => r.alvos.forEach(({ n, cam }) => {
+      const reg = (campo, valor) => { ant.nos.push([r.id, n.id, campo, n[campo] || '']); n[campo] = valor; };
+      if (!n.aocp) reg('aocp', 'prioridade');
+      if (!n.peso) reg('peso', cam === 'P' ? 'alto' : 'medio');
+      if (!n.diagnostico) reg('diagnostico', PLANO_V1.nivel[r.id] === 'N1' ? 'nao_estudado' : 'revisar');
+    }));
+    // simulados
+    if (incluirSim) PLANO_V1.simulados.forEach((s, i) => { const id = 'plano-sim-' + (i + 1) + '-' + novoId(); simulados.push({ id, rotulo: s.rotulo, data: null, acertos: { ...s.acertos } }); ant.simIds.push(id); });
+    planoAplicado = { versao: PLANO_V1.versao, em: new Date().toISOString(), anterior: ant };
+    salvarTudo();
+    renderizarModalPlano('Plano aplicado. Veja o Montar ciclo, o Edital e o card Simulados no Painel.');
+  }
+  function desfazerPlano() {
+    if (!planoAplicado) return;
+    if (!confirm('Desfazer o plano estratégico? Os campos preenchidos por ele voltam ao que eram antes.')) return;
+    const ant = planoAplicado.anterior, p = planoAtual();
+    ant.nos.forEach(([discId, nodeId, campo, antes]) => { const { node } = getNodeRef(discId, nodeId); if (node) node[campo] = antes; });
+    Object.entries(ant.plano.pd).forEach(([id, v]) => { const q = p.questoes[id]; if (q) { if (v) q.pd = v; else delete q.pd; } });
+    p.horasSemana = [...ant.plano.horasSemana]; p.garantir = ant.plano.garantir; p.revisaoFinal = ant.plano.revisaoFinal;
+    simulados = simulados.filter(s => !ant.simIds.includes(s.id));
+    planoAplicado = null;
+    salvarTudo(); renderizarModalPlano();
   }
   // Primeiro dia com estudo: recalculado a cada atualização, para acompanhar zerar, edição manual e importação
   function primeiroDiaComEstudo() {
